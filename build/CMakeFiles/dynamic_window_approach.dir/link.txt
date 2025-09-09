@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Werror -std=c++14 -save-temps=obj CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o -o dynamic_window_approach 
