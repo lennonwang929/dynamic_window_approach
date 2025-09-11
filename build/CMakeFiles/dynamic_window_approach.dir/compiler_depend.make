@@ -359,8 +359,19 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
   /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
   /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
-  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
+  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc
 
+
+/usr/include/c++/11/bits/vector.tcc:
+
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/c++/11/vector:
 
 /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
@@ -816,6 +827,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
+/usr/include/c++/11/bits/stl_bvector.h:
+
 /usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
@@ -873,6 +886,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/c++/11/bits/range_access.h:
+
+/usr/include/c++/11/bits/stl_vector.h:
 
 /usr/include/c++/11/cstddef:
 

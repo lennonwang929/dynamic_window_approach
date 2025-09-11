@@ -1,6 +1,7 @@
 #include <cmath>
 #include <iostream>
 #include <Eigen/Core>
+#include <vector>
 
 class Config{
     private:
@@ -29,7 +30,7 @@ class Config{
         }
 
 };
-// x，y,v,w,omega
+// x，y,v,yaw(rad),omega
 typedef Eigen::Matrix<double, 5, 1>  robotstate;
 
 Eigen::Vector4d calc_dw_window(robotstate state_now, Config& config){
@@ -39,9 +40,33 @@ Eigen::Vector4d calc_dw_window(robotstate state_now, Config& config){
     return DW;
 }
 
-motion(){
-    
+
+robotstate motion(robotstate state_now, Config& config){
+    robotstate state_next;
+    state_next[0] = state_now[0] + state_now[2] * cos(state_now[3]) * config.dt;
+    state_next[1] = state_now[1] + state_now[2] * sin(state_now[3]) * config.dt;
+    state_next[2] = state_now[2]; 
+    state_next[3] = state_now[3] + state_now[4] * config.dt;
+    state_next[4] = state_now[4];
+    return state_next;
 }
+
+std::vector<robotstate> tra_pre(robotstate state_init, Config& config){
+    std::vector<robotstate> trajectory = {state_init};
+
+    robotstate state_next = state_init;
+    double time = config.dt;
+    while(time <= config.predict_time){
+        state_next = motion(state_next, config);
+        trajectory.push_back(state_next);
+        time+=config.dt;
+    }
+    return trajectory;
+
+
+
+}
+
 
 
 int main(){
@@ -49,8 +74,9 @@ int main(){
     std::cout << c1.max_v << std::endl;
     robotstate state_now_;
     state_now_ << 0, 0, 0, 45 * M_PI / 180, 0;
-    std::cout << state_now_[3] << std::endl;
+    std::cout << state_now_[0] << std::endl;
     Eigen::Vector4d DW = calc_dw_window(state_now_, c1);
     std::cout << DW[3] << std::endl;
+    std::cout << motion(state_now_, c1)[0] << std::endl;
 
 }

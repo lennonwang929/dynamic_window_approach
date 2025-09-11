@@ -312,4 +312,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: \
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
  /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
- /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
+ /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+ /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc
