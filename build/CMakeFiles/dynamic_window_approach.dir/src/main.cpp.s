@@ -1,5 +1,29 @@
 	.file	"main.cpp"
 	.text
+	.section	.text._ZSt3absd,"axG",@progbits,_ZSt3absd,comdat
+	.weak	_ZSt3absd
+	.type	_ZSt3absd, @function
+_ZSt3absd:
+.LFB26:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movsd	%xmm0, -8(%rbp)
+	movsd	-8(%rbp), %xmm0
+	movq	.LC0(%rip), %xmm1
+	andpd	%xmm1, %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %xmm0
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE26:
+	.size	_ZSt3absd, .-_ZSt3absd
 	.section	.text._ZnwmPv,"axG",@progbits,_ZnwmPv,comdat
 	.weak	_ZnwmPv
 	.type	_ZnwmPv, @function
@@ -57,6 +81,28 @@ _ZStL13allocator_arg:
 	.size	_ZStL6ignore, 1
 _ZStL6ignore:
 	.zero	1
+	.section	.text._ZNSt14numeric_limitsIdE3maxEv,"axG",@progbits,_ZNSt14numeric_limitsIdE3maxEv,comdat
+	.weak	_ZNSt14numeric_limitsIdE3maxEv
+	.type	_ZNSt14numeric_limitsIdE3maxEv, @function
+_ZNSt14numeric_limitsIdE3maxEv:
+.LFB3148:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movsd	.LC1(%rip), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %xmm0
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE3148:
+	.size	_ZNSt14numeric_limitsIdE3maxEv, .-_ZNSt14numeric_limitsIdE3maxEv
+	.section	.rodata
 	.align 4
 	.type	_ZN5EigenL7DynamicE, @object
 	.size	_ZN5EigenL7DynamicE, 4
@@ -224,41 +270,47 @@ _ZN6ConfigC2Ev:
 	.cfi_def_cfa_register 6
 	movq	%rdi, -8(%rbp)
 	movq	-8(%rbp), %rax
-	movsd	.LC0(%rip), %xmm0
+	movsd	.LC2(%rip), %xmm0
 	movsd	%xmm0, (%rax)
 	movq	-8(%rbp), %rax
 	pxor	%xmm0, %xmm0
 	movsd	%xmm0, 8(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC2(%rip), %xmm0
+	movsd	.LC4(%rip), %xmm0
 	movsd	%xmm0, 16(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC3(%rip), %xmm0
+	movsd	.LC5(%rip), %xmm0
 	movsd	%xmm0, 24(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC4(%rip), %xmm0
+	movsd	.LC6(%rip), %xmm0
 	movsd	%xmm0, 32(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC5(%rip), %xmm0
+	movsd	.LC7(%rip), %xmm0
 	movsd	%xmm0, 40(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC4(%rip), %xmm0
+	movsd	.LC6(%rip), %xmm0
 	movsd	%xmm0, 48(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC5(%rip), %xmm0
+	movsd	.LC7(%rip), %xmm0
 	movsd	%xmm0, 56(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC6(%rip), %xmm0
+	movsd	.LC8(%rip), %xmm0
 	movsd	%xmm0, 64(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC6(%rip), %xmm0
+	movsd	.LC8(%rip), %xmm0
 	movsd	%xmm0, 72(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC7(%rip), %xmm0
+	movsd	.LC9(%rip), %xmm0
 	movsd	%xmm0, 80(%rax)
 	movq	-8(%rbp), %rax
-	movsd	.LC8(%rip), %xmm0
+	movsd	.LC10(%rip), %xmm0
 	movsd	%xmm0, 88(%rax)
+	movq	-8(%rbp), %rax
+	movsd	.LC11(%rip), %xmm0
+	movsd	%xmm0, 96(%rax)
+	movq	-8(%rbp), %rax
+	movsd	.LC9(%rip), %xmm0
+	movsd	%xmm0, 104(%rax)
 	nop
 	popq	%rbp
 	.cfi_def_cfa 7, 8
@@ -272,9 +324,9 @@ _ZN6ConfigC2Ev:
 	.section	.bss._ZZN6Config12get_instanceEvE8instance,"awG",@nobits,_ZZN6Config12get_instanceEvE8instance,comdat
 	.align 32
 	.type	_ZZN6Config12get_instanceEvE8instance, @gnu_unique_object
-	.size	_ZZN6Config12get_instanceEvE8instance, 96
+	.size	_ZZN6Config12get_instanceEvE8instance, 112
 _ZZN6Config12get_instanceEvE8instance:
-	.zero	96
+	.zero	112
 	.weak	_ZGVZN6Config12get_instanceEvE8instance
 	.section	.bss._ZGVZN6Config12get_instanceEvE8instance,"awG",@nobits,_ZGVZN6Config12get_instanceEvE8instance,comdat
 	.align 8
@@ -298,21 +350,21 @@ _ZN6Config12get_instanceEv:
 	testb	%al, %al
 	sete	%al
 	testb	%al, %al
-	je	.L7
+	je	.L11
 	leaq	_ZGVZN6Config12get_instanceEvE8instance(%rip), %rax
 	movq	%rax, %rdi
 	call	__cxa_guard_acquire@PLT
 	testl	%eax, %eax
 	setne	%al
 	testb	%al, %al
-	je	.L7
+	je	.L11
 	leaq	_ZZN6Config12get_instanceEvE8instance(%rip), %rax
 	movq	%rax, %rdi
 	call	_ZN6ConfigC1Ev
 	leaq	_ZGVZN6Config12get_instanceEvE8instance(%rip), %rax
 	movq	%rax, %rdi
 	call	__cxa_guard_release@PLT
-.L7:
+.L11:
 	leaq	_ZZN6Config12get_instanceEvE8instance(%rip), %rax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
@@ -475,9 +527,9 @@ _Z14calc_dw_windowN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config:
 	nop
 	movq	-40(%rbp), %rax
 	subq	%fs:40, %rax
-	je	.L11
+	je	.L15
 	call	__stack_chk_fail@PLT
-.L11:
+.L15:
 	movq	-152(%rbp), %rax
 	addq	$144, %rsp
 	popq	%rbx
@@ -719,8 +771,8 @@ _Z7tra_preN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config:
 	movq	-216(%rbp), %rax
 	movsd	88(%rax), %xmm0
 	movsd	%xmm0, -184(%rbp)
-	jmp	.L16
-.L17:
+	jmp	.L20
+.L21:
 	leaq	-176(%rbp), %rdx
 	leaq	-128(%rbp), %rax
 	movq	%rdx, %rsi
@@ -748,13 +800,13 @@ _Z7tra_preN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config:
 	movsd	-184(%rbp), %xmm1
 	addsd	%xmm1, %xmm0
 	movsd	%xmm0, -184(%rbp)
-.L16:
+.L20:
 	movq	-216(%rbp), %rax
 	movsd	80(%rax), %xmm0
 	comisd	-184(%rbp), %xmm0
-	jnb	.L17
-	jmp	.L24
-.L22:
+	jnb	.L21
+	jmp	.L28
+.L26:
 	endbr64
 	movq	%rax, %rbx
 	leaq	-185(%rbp), %rax
@@ -764,7 +816,7 @@ _Z7tra_preN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config:
 	movq	%rax, %rdi
 .LEHB3:
 	call	_Unwind_Resume@PLT
-.L23:
+.L27:
 	endbr64
 	movq	%rax, %rbx
 	movq	-200(%rbp), %rax
@@ -774,12 +826,12 @@ _Z7tra_preN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config:
 	movq	%rax, %rdi
 	call	_Unwind_Resume@PLT
 .LEHE3:
-.L24:
+.L28:
 	movq	-40(%rbp), %rax
 	subq	%fs:40, %rax
-	je	.L21
+	je	.L25
 	call	__stack_chk_fail@PLT
-.L21:
+.L25:
 	movq	-200(%rbp), %rax
 	addq	$200, %rsp
 	popq	%rbx
@@ -804,11 +856,11 @@ _Z7tra_preN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config:
 	.uleb128 0
 	.uleb128 .LEHB1-.LFB7705
 	.uleb128 .LEHE1-.LEHB1
-	.uleb128 .L22-.LFB7705
+	.uleb128 .L26-.LFB7705
 	.uleb128 0
 	.uleb128 .LEHB2-.LFB7705
 	.uleb128 .LEHE2-.LEHB2
-	.uleb128 .L23-.LFB7705
+	.uleb128 .L27-.LFB7705
 	.uleb128 0
 	.uleb128 .LEHB3-.LFB7705
 	.uleb128 .LEHE3-.LEHB3
@@ -817,13 +869,321 @@ _Z7tra_preN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config:
 .LLSDACSE7705:
 	.text
 	.size	_Z7tra_preN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config, .-_Z7tra_preN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config
+	.globl	_Z15calc_cost_angleN5Eigen6MatrixIdLi2ELi1ELi0ELi2ELi1EEESt6vectorINS0_IdLi5ELi1ELi0ELi5ELi1EEESaIS3_EE
+	.type	_Z15calc_cost_angleN5Eigen6MatrixIdLi2ELi1ELi0ELi2ELi1EEESt6vectorINS0_IdLi5ELi1ELi0ELi5ELi1EEESaIS3_EE, @function
+_Z15calc_cost_angleN5Eigen6MatrixIdLi2ELi1ELi0ELi2ELi1EEESt6vectorINS0_IdLi5ELi1ELi0ELi5ELi1EEESaIS3_EE:
+.LFB7715:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	pushq	%rbx
+	subq	$88, %rsp
+	.cfi_offset 3, -24
+	movq	%rdi, -72(%rbp)
+	movq	%rsi, -80(%rbp)
+	movq	-72(%rbp), %rax
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EEixEl
+	movsd	(%rax), %xmm2
+	movsd	%xmm2, -88(%rbp)
+	movq	-80(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl
+	movsd	(%rax), %xmm1
+	movsd	-88(%rbp), %xmm0
+	subsd	%xmm1, %xmm0
+	movsd	%xmm0, -56(%rbp)
+	movq	-72(%rbp), %rax
+	movl	$1, %esi
+	movq	%rax, %rdi
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EEixEl
+	movsd	(%rax), %xmm3
+	movsd	%xmm3, -88(%rbp)
+	movq	-80(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv
+	movl	$1, %esi
+	movq	%rax, %rdi
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl
+	movsd	(%rax), %xmm1
+	movsd	-88(%rbp), %xmm0
+	subsd	%xmm1, %xmm0
+	movsd	%xmm0, -48(%rbp)
+	movsd	-56(%rbp), %xmm0
+	movq	-48(%rbp), %rax
+	movapd	%xmm0, %xmm1
+	movq	%rax, %xmm0
+	call	atan2@PLT
+	movq	%xmm0, %rax
+	movq	%rax, -40(%rbp)
+	movq	-80(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv
+	movl	$3, %esi
+	movq	%rax, %rdi
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl
+	movsd	(%rax), %xmm0
+	subsd	-40(%rbp), %xmm0
+	movsd	%xmm0, -32(%rbp)
+	movq	-32(%rbp), %rax
+	movq	%rax, %xmm0
+	call	cos@PLT
+	movq	%xmm0, %rbx
+	movq	-32(%rbp), %rax
+	movq	%rax, %xmm0
+	call	sin@PLT
+	movq	%xmm0, %rax
+	movq	%rbx, %xmm1
+	movq	%rax, %xmm0
+	call	atan2@PLT
+	movq	%xmm0, %rax
+	movq	%rax, %xmm0
+	call	_ZSt3absd
+	movq	%xmm0, %rax
+	movq	%rax, -24(%rbp)
+	movsd	-24(%rbp), %xmm0
+	movq	%xmm0, %rax
+	movq	%rax, %xmm0
+	movq	-8(%rbp), %rbx
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE7715:
+	.size	_Z15calc_cost_angleN5Eigen6MatrixIdLi2ELi1ELi0ELi2ELi1EEESt6vectorINS0_IdLi5ELi1ELi0ELi5ELi1EEESaIS3_EE, .-_Z15calc_cost_angleN5Eigen6MatrixIdLi2ELi1ELi0ELi2ELi1EEESt6vectorINS0_IdLi5ELi1ELi0ELi5ELi1EEESaIS3_EE
+	.globl	_Z18calc_cost_obstacleRSt6vectorIS_IdSaIdEESaIS1_EES_IN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS7_EER6Config
+	.type	_Z18calc_cost_obstacleRSt6vectorIS_IdSaIdEESaIS1_EES_IN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS7_EER6Config, @function
+_Z18calc_cost_obstacleRSt6vectorIS_IdSaIdEESaIS1_EES_IN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS7_EER6Config:
+.LFB7716:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	addq	$-128, %rsp
+	movq	%rdi, -104(%rbp)
+	movq	%rsi, -112(%rbp)
+	movq	%rdx, -120(%rbp)
+	movq	%fs:40, %rax
+	movq	%rax, -8(%rbp)
+	xorl	%eax, %eax
+	movsd	.LC12(%rip), %xmm0
+	movsd	%xmm0, -80(%rbp)
+	movq	$0, -64(%rbp)
+	jmp	.L32
+.L45:
+	movq	$0, -56(%rbp)
+	jmp	.L33
+.L44:
+	movq	-56(%rbp), %rdx
+	movq	-112(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm
+	movl	$3, %esi
+	movq	%rax, %rdi
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl
+	movsd	(%rax), %xmm0
+	movsd	%xmm0, -48(%rbp)
+	movq	-64(%rbp), %rdx
+	movq	-104(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIS_IdSaIdEESaIS1_EEixEm
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIdSaIdEEixEm
+	movsd	(%rax), %xmm3
+	movsd	%xmm3, -128(%rbp)
+	movq	-56(%rbp), %rdx
+	movq	-112(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl
+	movsd	(%rax), %xmm1
+	movsd	-128(%rbp), %xmm0
+	subsd	%xmm1, %xmm0
+	movsd	%xmm0, -40(%rbp)
+	movq	-64(%rbp), %rdx
+	movq	-104(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIS_IdSaIdEESaIS1_EEixEm
+	movl	$1, %esi
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIdSaIdEEixEm
+	movsd	(%rax), %xmm4
+	movsd	%xmm4, -128(%rbp)
+	movq	-56(%rbp), %rdx
+	movq	-112(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm
+	movl	$1, %esi
+	movq	%rax, %rdi
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl
+	movsd	(%rax), %xmm1
+	movsd	-128(%rbp), %xmm0
+	subsd	%xmm1, %xmm0
+	movsd	%xmm0, -32(%rbp)
+	movsd	-32(%rbp), %xmm0
+	movq	-40(%rbp), %rax
+	movapd	%xmm0, %xmm1
+	movq	%rax, %xmm0
+	call	hypot@PLT
+	movq	%xmm0, %rax
+	movq	%rax, -72(%rbp)
+	movq	-48(%rbp), %rax
+	movq	%rax, %xmm0
+	call	cos@PLT
+	movq	%xmm0, %rax
+	movq	%rax, %xmm5
+	mulsd	-40(%rbp), %xmm5
+	movsd	%xmm5, -128(%rbp)
+	movq	-48(%rbp), %rax
+	movq	%rax, %xmm0
+	call	sin@PLT
+	movq	%xmm0, %rax
+	movq	%rax, %xmm0
+	mulsd	-32(%rbp), %xmm0
+	addsd	-128(%rbp), %xmm0
+	movsd	%xmm0, -24(%rbp)
+	movq	-48(%rbp), %rax
+	movq	%rax, %xmm0
+	call	sin@PLT
+	movq	%xmm0, %rax
+	movq	.LC13(%rip), %xmm0
+	movq	%rax, %xmm6
+	xorpd	%xmm0, %xmm6
+	movapd	%xmm6, %xmm0
+	mulsd	-40(%rbp), %xmm0
+	movsd	%xmm0, -128(%rbp)
+	movq	-48(%rbp), %rax
+	movq	%rax, %xmm0
+	call	cos@PLT
+	movq	%xmm0, %rax
+	movq	%rax, %xmm3
+	mulsd	-32(%rbp), %xmm3
+	movapd	%xmm3, %xmm0
+	addsd	-128(%rbp), %xmm0
+	movsd	%xmm0, -16(%rbp)
+	movq	-120(%rbp), %rax
+	movsd	96(%rax), %xmm0
+	movq	.LC13(%rip), %xmm1
+	xorpd	%xmm1, %xmm0
+	movsd	.LC14(%rip), %xmm2
+	movapd	%xmm0, %xmm1
+	divsd	%xmm2, %xmm1
+	movsd	-24(%rbp), %xmm0
+	comisd	%xmm1, %xmm0
+	jb	.L34
+	movq	-120(%rbp), %rax
+	movsd	96(%rax), %xmm0
+	movsd	.LC14(%rip), %xmm1
+	divsd	%xmm1, %xmm0
+	comisd	-24(%rbp), %xmm0
+	jb	.L34
+	movl	$1, %eax
+	jmp	.L37
+.L34:
+	movl	$0, %eax
+.L37:
+	movb	%al, -82(%rbp)
+	movq	-120(%rbp), %rax
+	movsd	104(%rax), %xmm0
+	movq	.LC13(%rip), %xmm1
+	xorpd	%xmm1, %xmm0
+	movsd	.LC14(%rip), %xmm2
+	movapd	%xmm0, %xmm1
+	divsd	%xmm2, %xmm1
+	movsd	-16(%rbp), %xmm0
+	comisd	%xmm1, %xmm0
+	jb	.L38
+	movq	-120(%rbp), %rax
+	movsd	104(%rax), %xmm0
+	movsd	.LC14(%rip), %xmm1
+	divsd	%xmm1, %xmm0
+	comisd	-16(%rbp), %xmm0
+	jb	.L38
+	movl	$1, %eax
+	jmp	.L41
+.L38:
+	movl	$0, %eax
+.L41:
+	movb	%al, -81(%rbp)
+	cmpb	$0, -82(%rbp)
+	je	.L42
+	cmpb	$0, -81(%rbp)
+	je	.L42
+	call	_ZNSt14numeric_limitsIdE3maxEv
+	movq	%xmm0, %rax
+	movsd	.LC14(%rip), %xmm1
+	movq	%rax, %xmm0
+	divsd	%xmm1, %xmm0
+	jmp	.L46
+.L42:
+	leaq	-80(%rbp), %rdx
+	leaq	-72(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZSt3minIdERKT_S2_S2_
+	movsd	(%rax), %xmm0
+	movsd	%xmm0, -80(%rbp)
+	addq	$1, -56(%rbp)
+.L33:
+	movq	-112(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv
+	cmpq	%rax, -56(%rbp)
+	setb	%al
+	testb	%al, %al
+	jne	.L44
+	addq	$1, -64(%rbp)
+.L32:
+	movq	-104(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNKSt6vectorIS_IdSaIdEESaIS1_EE4sizeEv
+	cmpq	%rax, -64(%rbp)
+	setb	%al
+	testb	%al, %al
+	jne	.L45
+	movsd	-80(%rbp), %xmm1
+	movsd	.LC15(%rip), %xmm0
+	divsd	%xmm1, %xmm0
+.L46:
+	movq	%xmm0, %rax
+	movq	-8(%rbp), %rdx
+	subq	%fs:40, %rdx
+	je	.L47
+	call	__stack_chk_fail@PLT
+.L47:
+	movq	%rax, %xmm0
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE7716:
+	.size	_Z18calc_cost_obstacleRSt6vectorIS_IdSaIdEESaIS1_EES_IN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS7_EER6Config, .-_Z18calc_cost_obstacleRSt6vectorIS_IdSaIdEESaIS1_EES_IN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS7_EER6Config
 	.globl	main
 	.type	main, @function
 main:
-.LFB7715:
+.LFB7717:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA7715
+	.cfi_lsda 0x1b,.LLSDA7717
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -877,7 +1237,7 @@ main:
 	movq	%rdx, %rdi
 	call	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd
 	movq	%rax, %rdx
-	movsd	.LC9(%rip), %xmm0
+	movsd	.LC16(%rip), %xmm0
 	movsd	%xmm0, -248(%rbp)
 	leaq	-248(%rbp), %rax
 	movq	%rax, %rsi
@@ -956,12 +1316,45 @@ main:
 	movq	%rdx, %rsi
 	movq	%rax, %rdi
 	call	_ZNSolsEPFRSoS_E@PLT
+	leaq	-160(%rbp), %rdx
+	leaq	-64(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC1ERKS1_
+	leaq	-224(%rbp), %rax
+	movq	-232(%rbp), %rdx
+	leaq	-64(%rbp), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_Z7tra_preN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config
+.LEHE6:
+	leaq	-224(%rbp), %rax
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm
+	movl	$0, %esi
+	movq	%rax, %rdi
+.LEHB7:
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl
+	movq	(%rax), %rax
+	movq	%rax, %xmm0
+	leaq	_ZSt4cout(%rip), %rax
+	movq	%rax, %rdi
+	call	_ZNSolsEd@PLT
+	movq	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GOTPCREL(%rip), %rdx
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZNSolsEPFRSoS_E@PLT
+.LEHE7:
+	leaq	-224(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED1Ev
 	movl	$0, %eax
 	movq	-24(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L28
-	jmp	.L30
-.L29:
+	je	.L56
+	jmp	.L59
+.L57:
 	endbr64
 	movq	%rax, %rbx
 	leaq	-224(%rbp), %rax
@@ -969,37 +1362,55 @@ main:
 	call	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev
 	movq	%rbx, %rax
 	movq	%rax, %rdi
+.LEHB8:
 	call	_Unwind_Resume@PLT
-.LEHE6:
-.L30:
+.L58:
+	endbr64
+	movq	%rax, %rbx
+	leaq	-224(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED1Ev
+	movq	%rbx, %rax
+	movq	%rax, %rdi
+	call	_Unwind_Resume@PLT
+.LEHE8:
+.L59:
 	call	__stack_chk_fail@PLT
-.L28:
+.L56:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE7715:
+.LFE7717:
 	.section	.gcc_except_table
-.LLSDA7715:
+.LLSDA7717:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE7715-.LLSDACSB7715
-.LLSDACSB7715:
-	.uleb128 .LEHB4-.LFB7715
+	.uleb128 .LLSDACSE7717-.LLSDACSB7717
+.LLSDACSB7717:
+	.uleb128 .LEHB4-.LFB7717
 	.uleb128 .LEHE4-.LEHB4
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB5-.LFB7715
+	.uleb128 .LEHB5-.LFB7717
 	.uleb128 .LEHE5-.LEHB5
-	.uleb128 .L29-.LFB7715
+	.uleb128 .L57-.LFB7717
 	.uleb128 0
-	.uleb128 .LEHB6-.LFB7715
+	.uleb128 .LEHB6-.LFB7717
 	.uleb128 .LEHE6-.LEHB6
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE7715:
+	.uleb128 .LEHB7-.LFB7717
+	.uleb128 .LEHE7-.LEHB7
+	.uleb128 .L58-.LFB7717
+	.uleb128 0
+	.uleb128 .LEHB8-.LFB7717
+	.uleb128 .LEHE8-.LEHB8
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE7717:
 	.text
 	.size	main, .-main
 	.section	.text._ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC2Ev,"axG",@progbits,_ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC5Ev,comdat
@@ -1007,7 +1418,7 @@ main:
 	.weak	_ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC2Ev
 	.type	_ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC2Ev, @function
 _ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC2Ev:
-.LFB8033:
+.LFB8035:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1021,7 +1432,7 @@ _ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8033:
+.LFE8035:
 	.size	_ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC2Ev, .-_ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC2Ev
 	.weak	_ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC1Ev
 	.set	_ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC1Ev,_ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC2Ev
@@ -1030,29 +1441,6 @@ _ZN5Eigen8symbolic10SymbolExprINS_8internal17symbolic_last_tagEEC2Ev:
 	.weak	_ZN5Eigen8internal8FixedIntILi1EEC2Ev
 	.type	_ZN5Eigen8internal8FixedIntILi1EEC2Ev, @function
 _ZN5Eigen8internal8FixedIntILi1EEC2Ev:
-.LFB8036:
-	.cfi_startproc
-	endbr64
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movq	%rdi, -8(%rbp)
-	nop
-	popq	%rbp
-	.cfi_def_cfa 7, 8
-	ret
-	.cfi_endproc
-.LFE8036:
-	.size	_ZN5Eigen8internal8FixedIntILi1EEC2Ev, .-_ZN5Eigen8internal8FixedIntILi1EEC2Ev
-	.weak	_ZN5Eigen8internal8FixedIntILi1EEC1Ev
-	.set	_ZN5Eigen8internal8FixedIntILi1EEC1Ev,_ZN5Eigen8internal8FixedIntILi1EEC2Ev
-	.section	.text._ZNK5Eigen8internal8FixedIntILi1EEclEv,"axG",@progbits,_ZNK5Eigen8internal8FixedIntILi1EEclEv,comdat
-	.align 2
-	.weak	_ZNK5Eigen8internal8FixedIntILi1EEclEv
-	.type	_ZNK5Eigen8internal8FixedIntILi1EEclEv, @function
-_ZNK5Eigen8internal8FixedIntILi1EEclEv:
 .LFB8038:
 	.cfi_startproc
 	endbr64
@@ -1068,13 +1456,36 @@ _ZNK5Eigen8internal8FixedIntILi1EEclEv:
 	ret
 	.cfi_endproc
 .LFE8038:
+	.size	_ZN5Eigen8internal8FixedIntILi1EEC2Ev, .-_ZN5Eigen8internal8FixedIntILi1EEC2Ev
+	.weak	_ZN5Eigen8internal8FixedIntILi1EEC1Ev
+	.set	_ZN5Eigen8internal8FixedIntILi1EEC1Ev,_ZN5Eigen8internal8FixedIntILi1EEC2Ev
+	.section	.text._ZNK5Eigen8internal8FixedIntILi1EEclEv,"axG",@progbits,_ZNK5Eigen8internal8FixedIntILi1EEclEv,comdat
+	.align 2
+	.weak	_ZNK5Eigen8internal8FixedIntILi1EEclEv
+	.type	_ZNK5Eigen8internal8FixedIntILi1EEclEv, @function
+_ZNK5Eigen8internal8FixedIntILi1EEclEv:
+.LFB8040:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8040:
 	.size	_ZNK5Eigen8internal8FixedIntILi1EEclEv, .-_ZNK5Eigen8internal8FixedIntILi1EEclEv
 	.section	.text._ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEEplILi1EEENS0_7AddExprIS5_NS0_9ValueExprINS3_8FixedIntIXT_EEEEEEESB_,"axG",@progbits,_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEEplILi1EEENS0_7AddExprIS5_NS0_9ValueExprINS3_8FixedIntIXT_EEEEEEESB_,comdat
 	.align 2
 	.weak	_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEEplILi1EEENS0_7AddExprIS5_NS0_9ValueExprINS3_8FixedIntIXT_EEEEEEESB_
 	.type	_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEEplILi1EEENS0_7AddExprIS5_NS0_9ValueExprINS3_8FixedIntIXT_EEEEEEESB_, @function
 _ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEEplILi1EEENS0_7AddExprIS5_NS0_9ValueExprINS3_8FixedIntIXT_EEEEEEESB_:
-.LFB8039:
+.LFB8041:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1104,23 +1515,23 @@ _ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEE
 	nop
 	movq	-24(%rbp), %rax
 	subq	%fs:40, %rax
-	je	.L37
+	je	.L66
 	call	__stack_chk_fail@PLT
-.L37:
+.L66:
 	movl	%ebx, %eax
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8039:
+.LFE8041:
 	.size	_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEEplILi1EEENS0_7AddExprIS5_NS0_9ValueExprINS3_8FixedIntIXT_EEEEEEESB_, .-_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEEplILi1EEENS0_7AddExprIS5_NS0_9ValueExprINS3_8FixedIntIXT_EEEEEEESB_
 	.section	.text._ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC2ERKdS3_S3_S3_,"axG",@progbits,_ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC5ERKdS3_S3_S3_,comdat
 	.align 2
 	.weak	_ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC2ERKdS3_S3_S3_
 	.type	_ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC2ERKdS3_S3_S3_, @function
 _ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC2ERKdS3_S3_S3_:
-.LFB8106:
+.LFB8108:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1170,25 +1581,25 @@ _ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC2ERKdS3_S3_S3_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8106:
+.LFE8108:
 	.size	_ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC2ERKdS3_S3_S3_, .-_ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC2ERKdS3_S3_S3_
 	.weak	_ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC1ERKdS3_S3_S3_
 	.set	_ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC1ERKdS3_S3_S3_,_ZN5Eigen6MatrixIdLi4ELi1ELi0ELi4ELi1EEC2ERKdS3_S3_S3_
 	.section	.rodata
 	.align 8
-.LC10:
+.LC17:
 	.string	"Eigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator[](Eigen::Index) [with Derived = Eigen::Matrix<double, 5, 1>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = double; Eigen::Index = long int]"
 	.align 8
-.LC11:
+.LC18:
 	.string	"/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h"
-.LC12:
+.LC19:
 	.string	"index >= 0 && index < size()"
 	.section	.text._ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl,"axG",@progbits,_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl,comdat
 	.align 2
 	.weak	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl
 	.type	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl, @function
 _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl:
-.LFB8108:
+.LFB8110:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1200,22 +1611,22 @@ _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl:
 	movq	%rdi, -8(%rbp)
 	movq	%rsi, -16(%rbp)
 	cmpq	$0, -16(%rbp)
-	js	.L40
+	js	.L69
 	movq	-8(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv
 	cmpq	%rax, -16(%rbp)
-	jl	.L43
-.L40:
-	leaq	.LC10(%rip), %rax
+	jl	.L72
+.L69:
+	leaq	.LC17(%rip), %rax
 	movq	%rax, %rcx
 	movl	$410, %edx
-	leaq	.LC11(%rip), %rax
+	leaq	.LC18(%rip), %rax
 	movq	%rax, %rsi
-	leaq	.LC12(%rip), %rax
+	leaq	.LC19(%rip), %rax
 	movq	%rax, %rdi
 	call	__assert_fail@PLT
-.L43:
+.L72:
 	movq	-16(%rbp), %rdx
 	movq	-8(%rbp), %rax
 	movq	%rdx, %rsi
@@ -1225,18 +1636,18 @@ _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8108:
+.LFE8110:
 	.size	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl, .-_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EEixEl
 	.section	.rodata
 	.align 8
-.LC13:
+.LC20:
 	.string	"Eigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator[](Eigen::Index) [with Derived = Eigen::Matrix<double, 4, 1>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = double; Eigen::Index = long int]"
 	.section	.text._ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EEixEl,"axG",@progbits,_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EEixEl,comdat
 	.align 2
 	.weak	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EEixEl
 	.type	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EEixEl, @function
 _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EEixEl:
-.LFB8109:
+.LFB8111:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1248,22 +1659,22 @@ _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EEixEl:
 	movq	%rdi, -8(%rbp)
 	movq	%rsi, -16(%rbp)
 	cmpq	$0, -16(%rbp)
-	js	.L45
+	js	.L74
 	movq	-8(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4sizeEv
 	cmpq	%rax, -16(%rbp)
-	jl	.L48
-.L45:
-	leaq	.LC13(%rip), %rax
+	jl	.L77
+.L74:
+	leaq	.LC20(%rip), %rax
 	movq	%rax, %rcx
 	movl	$410, %edx
-	leaq	.LC11(%rip), %rax
+	leaq	.LC18(%rip), %rax
 	movq	%rax, %rsi
-	leaq	.LC12(%rip), %rax
+	leaq	.LC19(%rip), %rax
 	movq	%rax, %rdi
 	call	__assert_fail@PLT
-.L48:
+.L77:
 	movq	-16(%rbp), %rdx
 	movq	-8(%rbp), %rax
 	movq	%rdx, %rsi
@@ -1273,13 +1684,13 @@ _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EEixEl:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8109:
+.LFE8111:
 	.size	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EEixEl, .-_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EEixEl
 	.section	.text._ZSt3minIdERKT_S2_S2_,"axG",@progbits,_ZSt3minIdERKT_S2_S2_,comdat
 	.weak	_ZSt3minIdERKT_S2_S2_
 	.type	_ZSt3minIdERKT_S2_S2_, @function
 _ZSt3minIdERKT_S2_S2_:
-.LFB8110:
+.LFB8112:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1294,23 +1705,23 @@ _ZSt3minIdERKT_S2_S2_:
 	movq	-8(%rbp), %rax
 	movsd	(%rax), %xmm0
 	comisd	%xmm1, %xmm0
-	jbe	.L54
+	jbe	.L83
 	movq	-16(%rbp), %rax
-	jmp	.L52
-.L54:
+	jmp	.L81
+.L83:
 	movq	-8(%rbp), %rax
-.L52:
+.L81:
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8110:
+.LFE8112:
 	.size	_ZSt3minIdERKT_S2_S2_, .-_ZSt3minIdERKT_S2_S2_
 	.section	.text._ZSt3maxIdERKT_S2_S2_,"axG",@progbits,_ZSt3maxIdERKT_S2_S2_,comdat
 	.weak	_ZSt3maxIdERKT_S2_S2_
 	.type	_ZSt3maxIdERKT_S2_S2_, @function
 _ZSt3maxIdERKT_S2_S2_:
-.LFB8111:
+.LFB8113:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1325,24 +1736,24 @@ _ZSt3maxIdERKT_S2_S2_:
 	movq	-16(%rbp), %rax
 	movsd	(%rax), %xmm0
 	comisd	%xmm1, %xmm0
-	jbe	.L60
+	jbe	.L89
 	movq	-16(%rbp), %rax
-	jmp	.L58
-.L60:
+	jmp	.L87
+.L89:
 	movq	-8(%rbp), %rax
-.L58:
+.L87:
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8111:
+.LFE8113:
 	.size	_ZSt3maxIdERKT_S2_S2_, .-_ZSt3maxIdERKT_S2_S2_
 	.section	.text._ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2Ev,"axG",@progbits,_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2Ev
 	.type	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2Ev, @function
 _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2Ev:
-.LFB8116:
+.LFB8118:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1361,7 +1772,7 @@ _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8116:
+.LFE8118:
 	.size	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2Ev, .-_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2Ev
 	.weak	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC1Ev
 	.set	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC1Ev,_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2Ev
@@ -1370,7 +1781,7 @@ _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2Ev:
 	.weak	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2EOS1_
 	.type	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2EOS1_, @function
 _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2EOS1_:
-.LFB8119:
+.LFB8121:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1397,7 +1808,7 @@ _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2EOS1_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8119:
+.LFE8121:
 	.size	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2EOS1_, .-_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2EOS1_
 	.weak	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC1EOS1_
 	.set	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC1EOS1_,_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2EOS1_
@@ -1406,7 +1817,7 @@ _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2EOS1_:
 	.weak	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2ERKS1_
 	.type	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2ERKS1_, @function
 _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2ERKS1_:
-.LFB8122:
+.LFB8124:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1427,7 +1838,7 @@ _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2ERKS1_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8122:
+.LFE8124:
 	.size	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2ERKS1_, .-_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2ERKS1_
 	.weak	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC1ERKS1_
 	.set	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC1ERKS1_,_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2ERKS1_
@@ -1436,7 +1847,7 @@ _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC2ERKS1_:
 	.weak	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.type	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, @function
 _ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
-.LFB8125:
+.LFB8127:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1454,7 +1865,7 @@ _ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8125:
+.LFE8127:
 	.size	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, .-_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.weak	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev
 	.set	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev,_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
@@ -1463,7 +1874,7 @@ _ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.weak	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.type	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, @function
 _ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
-.LFB8128:
+.LFB8130:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1481,7 +1892,7 @@ _ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8128:
+.LFE8130:
 	.size	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, .-_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.weak	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev
 	.set	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev,_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
@@ -1490,10 +1901,10 @@ _ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ESt16initializer_listIS2_ERKS3_
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ESt16initializer_listIS2_ERKS3_, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ESt16initializer_listIS2_ERKS3_:
-.LFB8131:
+.LFB8133:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8131
+	.cfi_lsda 0x1b,.LLSDA8133
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -1530,11 +1941,11 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ESt16initializer_li
 	movq	%rbx, %rdx
 	movq	%rcx, %rsi
 	movq	%rax, %rdi
-.LEHB7:
+.LEHB9:
 	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_range_initializeIPKS2_EEvT_S8_St20forward_iterator_tag
-.LEHE7:
-	jmp	.L70
-.L69:
+.LEHE9:
+	jmp	.L99
+.L98:
 	endbr64
 	movq	%rax, %rbx
 	movq	-40(%rbp), %rax
@@ -1542,37 +1953,37 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ESt16initializer_li
 	call	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev
 	movq	%rbx, %rax
 	movq	%rax, %rdi
-.LEHB8:
+.LEHB10:
 	call	_Unwind_Resume@PLT
-.LEHE8:
-.L70:
+.LEHE10:
+.L99:
 	movq	-24(%rbp), %rax
 	subq	%fs:40, %rax
-	je	.L68
+	je	.L97
 	call	__stack_chk_fail@PLT
-.L68:
+.L97:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8131:
+.LFE8133:
 	.section	.gcc_except_table
-.LLSDA8131:
+.LLSDA8133:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8131-.LLSDACSB8131
-.LLSDACSB8131:
-	.uleb128 .LEHB7-.LFB8131
-	.uleb128 .LEHE7-.LEHB7
-	.uleb128 .L69-.LFB8131
+	.uleb128 .LLSDACSE8133-.LLSDACSB8133
+.LLSDACSB8133:
+	.uleb128 .LEHB9-.LFB8133
+	.uleb128 .LEHE9-.LEHB9
+	.uleb128 .L98-.LFB8133
 	.uleb128 0
-	.uleb128 .LEHB8-.LFB8131
-	.uleb128 .LEHE8-.LEHB8
+	.uleb128 .LEHB10-.LFB8133
+	.uleb128 .LEHE10-.LEHB10
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8131:
+.LLSDACSE8133:
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ESt16initializer_listIS2_ERKS3_,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC5ESt16initializer_listIS2_ERKS3_,comdat
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ESt16initializer_listIS2_ERKS3_, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ESt16initializer_listIS2_ERKS3_
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC1ESt16initializer_listIS2_ERKS3_
@@ -1582,10 +1993,10 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ESt16initializer_li
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev:
-.LFB8134:
+.LFB8136:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8134
+	.cfi_lsda 0x1b,.LLSDA8136
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -1613,15 +2024,15 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8134:
+.LFE8136:
 	.section	.gcc_except_table
-.LLSDA8134:
+.LLSDA8136:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8134-.LLSDACSB8134
-.LLSDACSB8134:
-.LLSDACSE8134:
+	.uleb128 .LLSDACSE8136-.LLSDACSB8136
+.LLSDACSB8136:
+.LLSDACSE8136:
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED5Ev,comdat
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED1Ev
@@ -1631,7 +2042,7 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev:
 	.weak	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEaSEOS1_
 	.type	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEaSEOS1_, @function
 _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEaSEOS1_:
-.LFB8136:
+.LFB8138:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1657,14 +2068,14 @@ _ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEaSEOS1_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8136:
+.LFE8138:
 	.size	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEaSEOS1_, .-_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEaSEOS1_
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_,comdat
 	.align 2
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_:
-.LFB8137:
+.LFB8139:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1680,7 +2091,7 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_:
 	movq	-8(%rbp), %rax
 	movq	16(%rax), %rax
 	cmpq	%rax, %rdx
-	je	.L75
+	je	.L104
 	movq	-8(%rbp), %rax
 	movq	8(%rax), %rcx
 	movq	-8(%rbp), %rax
@@ -1693,8 +2104,8 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_:
 	leaq	40(%rax), %rdx
 	movq	-8(%rbp), %rax
 	movq	%rdx, 8(%rax)
-	jmp	.L77
-.L75:
+	jmp	.L106
+.L104:
 	movq	-8(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv
@@ -1704,23 +2115,23 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_:
 	movq	%rcx, %rsi
 	movq	%rax, %rdi
 	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_
-.L77:
+.L106:
 	nop
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8137:
+.LFE8139:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE9push_backERKS2_
 	.section	.text._ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev,"axG",@progbits,_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED5Ev,comdat
 	.align 2
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev
 	.type	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev, @function
 _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev:
-.LFB8143:
+.LFB8145:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8143
+	.cfi_lsda 0x1b,.LLSDA8145
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -1754,25 +2165,258 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8143:
+.LFE8145:
 	.section	.gcc_except_table
-.LLSDA8143:
+.LLSDA8145:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8143-.LLSDACSB8143
-.LLSDACSB8143:
-.LLSDACSE8143:
+	.uleb128 .LLSDACSE8145-.LLSDACSB8145
+.LLSDACSB8145:
+.LLSDACSE8145:
 	.section	.text._ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev,"axG",@progbits,_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED5Ev,comdat
 	.size	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev, .-_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED1Ev
 	.set	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED1Ev,_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EED2Ev
+	.section	.rodata
+	.align 8
+.LC21:
+	.string	"Eigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator[](Eigen::Index) [with Derived = Eigen::Matrix<double, 2, 1>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = double; Eigen::Index = long int]"
+	.section	.text._ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EEixEl,"axG",@progbits,_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EEixEl,comdat
+	.align 2
+	.weak	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EEixEl
+	.type	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EEixEl, @function
+_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EEixEl:
+.LFB8147:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	cmpq	$0, -16(%rbp)
+	js	.L109
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4sizeEv
+	cmpq	%rax, -16(%rbp)
+	jl	.L112
+.L109:
+	leaq	.LC21(%rip), %rax
+	movq	%rax, %rcx
+	movl	$410, %edx
+	leaq	.LC18(%rip), %rax
+	movq	%rax, %rsi
+	leaq	.LC19(%rip), %rax
+	movq	%rax, %rdi
+	call	__assert_fail@PLT
+.L112:
+	movq	-16(%rbp), %rdx
+	movq	-8(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EE8coeffRefEl
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8147:
+	.size	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EEixEl, .-_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EEixEl
+	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv,comdat
+	.align 2
+	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv
+	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv, @function
+_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv:
+.LFB8148:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$48, %rsp
+	movq	%rdi, -40(%rbp)
+	movq	%fs:40, %rax
+	movq	%rax, -8(%rbp)
+	xorl	%eax, %eax
+	movq	-40(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv
+	movq	%rax, -24(%rbp)
+	leaq	-24(%rbp), %rax
+	movl	$1, %esi
+	movq	%rax, %rdi
+	call	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEmiEl
+	movq	%rax, -16(%rbp)
+	leaq	-16(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEdeEv
+	movq	-8(%rbp), %rdx
+	subq	%fs:40, %rdx
+	je	.L115
+	call	__stack_chk_fail@PLT
+.L115:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8148:
+	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4backEv
+	.section	.text._ZNKSt6vectorIS_IdSaIdEESaIS1_EE4sizeEv,"axG",@progbits,_ZNKSt6vectorIS_IdSaIdEESaIS1_EE4sizeEv,comdat
+	.align 2
+	.weak	_ZNKSt6vectorIS_IdSaIdEESaIS1_EE4sizeEv
+	.type	_ZNKSt6vectorIS_IdSaIdEESaIS1_EE4sizeEv, @function
+_ZNKSt6vectorIS_IdSaIdEESaIS1_EE4sizeEv:
+.LFB8149:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	8(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	(%rax), %rcx
+	movq	%rdx, %rax
+	subq	%rcx, %rax
+	sarq	$3, %rax
+	movq	%rax, %rdx
+	movabsq	$-6148914691236517205, %rax
+	imulq	%rdx, %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8149:
+	.size	_ZNKSt6vectorIS_IdSaIdEESaIS1_EE4sizeEv, .-_ZNKSt6vectorIS_IdSaIdEESaIS1_EE4sizeEv
+	.section	.text._ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv,"axG",@progbits,_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv,comdat
+	.align 2
+	.weak	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv
+	.type	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv, @function
+_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv:
+.LFB8150:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	8(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	(%rax), %rcx
+	movq	%rdx, %rax
+	subq	%rcx, %rax
+	sarq	$3, %rax
+	movq	%rax, %rdx
+	movabsq	$-3689348814741910323, %rax
+	imulq	%rdx, %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8150:
+	.size	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv, .-_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv
+	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm,comdat
+	.align 2
+	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm
+	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm, @function
+_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm:
+.LFB8151:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rax
+	movq	(%rax), %rcx
+	movq	-16(%rbp), %rdx
+	movq	%rdx, %rax
+	salq	$2, %rax
+	addq	%rdx, %rax
+	salq	$3, %rax
+	addq	%rcx, %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8151:
+	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEixEm
+	.section	.text._ZNSt6vectorIS_IdSaIdEESaIS1_EEixEm,"axG",@progbits,_ZNSt6vectorIS_IdSaIdEESaIS1_EEixEm,comdat
+	.align 2
+	.weak	_ZNSt6vectorIS_IdSaIdEESaIS1_EEixEm
+	.type	_ZNSt6vectorIS_IdSaIdEESaIS1_EEixEm, @function
+_ZNSt6vectorIS_IdSaIdEESaIS1_EEixEm:
+.LFB8152:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rax
+	movq	(%rax), %rcx
+	movq	-16(%rbp), %rdx
+	movq	%rdx, %rax
+	addq	%rax, %rax
+	addq	%rdx, %rax
+	salq	$3, %rax
+	addq	%rcx, %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8152:
+	.size	_ZNSt6vectorIS_IdSaIdEESaIS1_EEixEm, .-_ZNSt6vectorIS_IdSaIdEESaIS1_EEixEm
+	.section	.text._ZNSt6vectorIdSaIdEEixEm,"axG",@progbits,_ZNSt6vectorIdSaIdEEixEm,comdat
+	.align 2
+	.weak	_ZNSt6vectorIdSaIdEEixEm
+	.type	_ZNSt6vectorIdSaIdEEixEm, @function
+_ZNSt6vectorIdSaIdEEixEm:
+.LFB8153:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rax
+	movq	(%rax), %rdx
+	movq	-16(%rbp), %rax
+	salq	$3, %rax
+	addq	%rdx, %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8153:
+	.size	_ZNSt6vectorIdSaIdEEixEm, .-_ZNSt6vectorIdSaIdEEixEm
 	.section	.text._ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEElsERKd,"axG",@progbits,_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEElsERKd,comdat
 	.align 2
 	.weak	_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEElsERKd
 	.type	_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEElsERKd, @function
 _ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEElsERKd:
-.LFB8148:
+.LFB8157:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1795,14 +2439,14 @@ _ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEElsERKd:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8148:
+.LFE8157:
 	.size	_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEElsERKd, .-_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEElsERKd
 	.section	.text._ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev,"axG",@progbits,_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.type	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, @function
 _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
-.LFB8150:
+.LFB8159:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1820,31 +2464,31 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8150:
+.LFE8159:
 	.size	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, .-_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.weak	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev
 	.set	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev,_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.section	.rodata
 	.align 8
-.LC14:
+.LC22:
 	.string	"Eigen::CommaInitializer<MatrixType>& Eigen::CommaInitializer<MatrixType>::operator,(const Scalar&) [with XprType = Eigen::Matrix<double, 5, 1>; Eigen::CommaInitializer<MatrixType>::Scalar = double]"
 	.align 8
-.LC15:
+.LC23:
 	.string	"/usr/include/eigen3/Eigen/src/Core/CommaInitializer.h"
 	.align 8
-.LC16:
+.LC24:
 	.string	"m_row<m_xpr.rows() && \"Too many rows passed to comma initializer (operator<<)\""
 	.align 8
-.LC17:
+.LC25:
 	.string	"m_col<m_xpr.cols() && \"Too many coefficients passed to comma initializer (operator<<)\""
-.LC18:
+.LC26:
 	.string	"m_currentBlockRows==1"
 	.section	.text._ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd,"axG",@progbits,_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd,comdat
 	.align 2
 	.weak	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd
 	.type	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd, @function
 _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd:
-.LFB8152:
+.LFB8161:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1866,7 +2510,7 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd:
 	cmpq	%rax, %rbx
 	sete	%al
 	testb	%al, %al
-	je	.L83
+	je	.L130
 	movq	-24(%rbp), %rax
 	movq	8(%rax), %rdx
 	movq	-24(%rbp), %rax
@@ -1885,18 +2529,18 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd:
 	movq	%rax, %rdi
 	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv
 	cmpq	%rax, %rbx
-	jl	.L91
-	leaq	.LC14(%rip), %rax
+	jl	.L138
+	leaq	.LC22(%rip), %rax
 	movq	%rax, %rcx
 	movl	$72, %edx
-	leaq	.LC15(%rip), %rax
+	leaq	.LC23(%rip), %rax
 	movq	%rax, %rsi
-	leaq	.LC16(%rip), %rax
+	leaq	.LC24(%rip), %rax
 	movq	%rax, %rdi
 	call	__assert_fail@PLT
-.L91:
+.L138:
 	nop
-.L83:
+.L130:
 	movq	-24(%rbp), %rax
 	movq	16(%rax), %rbx
 	movq	-24(%rbp), %rax
@@ -1904,30 +2548,30 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd:
 	movq	%rax, %rdi
 	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv
 	cmpq	%rax, %rbx
-	jl	.L92
-	leaq	.LC14(%rip), %rax
+	jl	.L139
+	leaq	.LC22(%rip), %rax
 	movq	%rax, %rcx
 	movl	$75, %edx
-	leaq	.LC15(%rip), %rax
+	leaq	.LC23(%rip), %rax
 	movq	%rax, %rsi
-	leaq	.LC17(%rip), %rax
+	leaq	.LC25(%rip), %rax
 	movq	%rax, %rdi
 	call	__assert_fail@PLT
-.L92:
+.L139:
 	nop
 	movq	-24(%rbp), %rax
 	movq	24(%rax), %rax
 	cmpq	$1, %rax
-	je	.L88
-	leaq	.LC14(%rip), %rax
+	je	.L135
+	leaq	.LC22(%rip), %rax
 	movq	%rax, %rcx
 	movl	$77, %edx
-	leaq	.LC15(%rip), %rax
+	leaq	.LC23(%rip), %rax
 	movq	%rax, %rsi
-	leaq	.LC18(%rip), %rax
+	leaq	.LC26(%rip), %rax
 	movq	%rax, %rdi
 	call	__assert_fail@PLT
-.L88:
+.L135:
 	movq	-24(%rbp), %rax
 	movq	(%rax), %rax
 	movq	%rax, %rdi
@@ -1950,14 +2594,14 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8152:
+.LFE8161:
 	.size	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd, .-_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEcmERKd
 	.section	.text._ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEE7derivedEv,"axG",@progbits,_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEE7derivedEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEE7derivedEv
 	.type	_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEE7derivedEv, @function
 _ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEE7derivedEv:
-.LFB8294:
+.LFB8303:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1971,14 +2615,14 @@ _ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEE
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8294:
+.LFE8303:
 	.size	_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEE7derivedEv, .-_ZNK5Eigen8symbolic8BaseExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEEE7derivedEv
 	.section	.text._ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC2Ev,"axG",@progbits,_ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC2Ev
 	.type	_ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC2Ev, @function
 _ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC2Ev:
-.LFB8296:
+.LFB8305:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -1992,7 +2636,7 @@ _ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8296:
+.LFE8305:
 	.size	_ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC2Ev, .-_ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC2Ev
 	.weak	_ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC1Ev
 	.set	_ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC1Ev,_ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC2Ev
@@ -2001,7 +2645,7 @@ _ZN5Eigen8symbolic9ValueExprINS_8internal8FixedIntILi1EEEEC2Ev:
 	.weak	_ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS0_9ValueExprINS3_8FixedIntILi1EEEEEEC2ERKS5_RKS9_
 	.type	_ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS0_9ValueExprINS3_8FixedIntILi1EEEEEEC2ERKS5_RKS9_, @function
 _ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS0_9ValueExprINS3_8FixedIntILi1EEEEEEC2ERKS5_RKS9_:
-.LFB8299:
+.LFB8308:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2017,7 +2661,7 @@ _ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8299:
+.LFE8308:
 	.size	_ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS0_9ValueExprINS3_8FixedIntILi1EEEEEEC2ERKS5_RKS9_, .-_ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS0_9ValueExprINS3_8FixedIntILi1EEEEEEC2ERKS5_RKS9_
 	.weak	_ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS0_9ValueExprINS3_8FixedIntILi1EEEEEEC1ERKS5_RKS9_
 	.set	_ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS0_9ValueExprINS3_8FixedIntILi1EEEEEEC1ERKS5_RKS9_,_ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS0_9ValueExprINS3_8FixedIntILi1EEEEEEC2ERKS5_RKS9_
@@ -2026,7 +2670,7 @@ _ZN5Eigen8symbolic7AddExprINS0_10SymbolExprINS_8internal17symbolic_last_tagEEENS
 	.weak	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
 	.type	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev, @function
 _ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
-.LFB8307:
+.LFB8316:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2044,7 +2688,7 @@ _ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8307:
+.LFE8316:
 	.size	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev, .-_ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
 	.weak	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1Ev
 	.set	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1Ev,_ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
@@ -2053,7 +2697,7 @@ _ZN5Eigen10MatrixBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
 	.type	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev, @function
 _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
-.LFB8309:
+.LFB8318:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2074,7 +2718,7 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8309:
+.LFE8318:
 	.size	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev, .-_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1Ev
 	.set	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1Ev,_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
@@ -2082,7 +2726,7 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE22_check_template_paramsEv
 	.type	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE22_check_template_paramsEv, @function
 _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE22_check_template_paramsEv:
-.LFB8311:
+.LFB8320:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2095,14 +2739,14 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE22_check_template_
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8311:
+.LFE8320:
 	.size	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE22_check_template_paramsEv, .-_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE22_check_template_paramsEv
 	.section	.text._ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv,comdat
 	.align 2
 	.weak	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv
 	.type	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv, @function
 _ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv:
-.LFB8312:
+.LFB8321:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2116,14 +2760,14 @@ _ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8312:
+.LFE8321:
 	.size	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv, .-_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv
 	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv
 	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv, @function
 _ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv:
-.LFB8314:
+.LFB8323:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2142,14 +2786,14 @@ _ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8314:
+.LFE8323:
 	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv
 	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv
 	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv, @function
 _ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv:
-.LFB8313:
+.LFB8322:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2174,14 +2818,14 @@ _ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8313:
+.LFE8322:
 	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv
 	.section	.text._ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED2Ev,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED2Ev
 	.type	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED2Ev, @function
 _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED2Ev:
-.LFB8318:
+.LFB8327:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2199,7 +2843,7 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8318:
+.LFE8327:
 	.size	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED2Ev, .-_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED2Ev
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED1Ev
 	.set	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED1Ev,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEED2Ev
@@ -2208,7 +2852,7 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi
 	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.type	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, @function
 _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
-.LFB8320:
+.LFB8329:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2226,7 +2870,7 @@ _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8320:
+.LFE8329:
 	.size	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, .-_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev
 	.set	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
@@ -2235,7 +2879,7 @@ _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
 	.weak	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EE8coeffRefEl
 	.type	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EE8coeffRefEl, @function
 _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EE8coeffRefEl:
-.LFB8315:
+.LFB8324:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2272,22 +2916,22 @@ _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EE8coeffRefEl:
 	movq	%rbx, %rax
 	movq	-24(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L110
+	je	.L157
 	call	__stack_chk_fail@PLT
-.L110:
+.L157:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8315:
+.LFE8324:
 	.size	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EE8coeffRefEl, .-_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEELi1EE8coeffRefEl
 	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv
 	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv, @function
 _ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv:
-.LFB8323:
+.LFB8332:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2306,14 +2950,14 @@ _ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8323:
+.LFE8332:
 	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv
 	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4sizeEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4sizeEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4sizeEv
 	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4sizeEv, @function
 _ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4sizeEv:
-.LFB8322:
+.LFB8331:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2338,14 +2982,14 @@ _ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4sizeEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8322:
+.LFE8331:
 	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4sizeEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4sizeEv
 	.section	.text._ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED2Ev,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED2Ev
 	.type	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED2Ev, @function
 _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED2Ev:
-.LFB8327:
+.LFB8336:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2363,7 +3007,7 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8327:
+.LFE8336:
 	.size	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED2Ev, .-_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED2Ev
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED1Ev
 	.set	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED1Ev,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEED2Ev
@@ -2372,7 +3016,7 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi
 	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev
 	.type	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev, @function
 _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev:
-.LFB8329:
+.LFB8338:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2390,7 +3034,7 @@ _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8329:
+.LFE8338:
 	.size	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev, .-_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev
 	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED1Ev
 	.set	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED1Ev,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev
@@ -2399,7 +3043,7 @@ _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev:
 	.weak	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EE8coeffRefEl
 	.type	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EE8coeffRefEl, @function
 _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EE8coeffRefEl:
-.LFB8324:
+.LFB8333:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2436,22 +3080,22 @@ _ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EE8coeffRefEl:
 	movq	%rbx, %rax
 	movq	-24(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L119
+	je	.L166
 	call	__stack_chk_fail@PLT
-.L119:
+.L166:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8324:
+.LFE8333:
 	.size	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EE8coeffRefEl, .-_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEELi1EE8coeffRefEl
 	.section	.text._ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev,"axG",@progbits,_ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.type	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, @function
 _ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
-.LFB8337:
+.LFB8346:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2469,7 +3113,7 @@ _ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8337:
+.LFE8346:
 	.size	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, .-_ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.weak	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev
 	.set	_ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev,_ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
@@ -2478,7 +3122,7 @@ _ZN5Eigen10MatrixBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.type	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, @function
 _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
-.LFB8339:
+.LFB8348:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2499,7 +3143,7 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8339:
+.LFE8348:
 	.size	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, .-_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev
 	.set	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev,_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
@@ -2507,7 +3151,7 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE22_check_template_paramsEv
 	.type	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE22_check_template_paramsEv, @function
 _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE22_check_template_paramsEv:
-.LFB8341:
+.LFB8350:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2520,13 +3164,13 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE22_check_template_
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8341:
+.LFE8350:
 	.size	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE22_check_template_paramsEv, .-_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE22_check_template_paramsEv
 	.section	.text._ZSt4moveIRN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS5_,"axG",@progbits,_ZSt4moveIRN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS5_,comdat
 	.weak	_ZSt4moveIRN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS5_
 	.type	_ZSt4moveIRN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS5_, @function
 _ZSt4moveIRN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS5_:
-.LFB8342:
+.LFB8351:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2540,14 +3184,14 @@ _ZSt4moveIRN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typ
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8342:
+.LFE8351:
 	.size	_ZSt4moveIRN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS5_, .-_ZSt4moveIRN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS5_
 	.section	.text._ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2EOS3_,"axG",@progbits,_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC5EOS3_,comdat
 	.align 2
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2EOS3_
 	.type	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2EOS3_, @function
 _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2EOS3_:
-.LFB8344:
+.LFB8353:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2583,7 +3227,7 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2EOS3_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8344:
+.LFE8353:
 	.size	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2EOS3_, .-_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2EOS3_
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1EOS3_
 	.set	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1EOS3_,_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2EOS3_
@@ -2592,7 +3236,7 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2EOS3_:
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_
 	.type	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_, @function
 _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_:
-.LFB8347:
+.LFB8356:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2626,7 +3270,7 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8347:
+.LFE8356:
 	.size	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_, .-_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERKS3_
 	.set	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERKS3_,_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_
@@ -2635,7 +3279,7 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_:
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.type	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, @function
 _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
-.LFB8350:
+.LFB8359:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2649,7 +3293,7 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8350:
+.LFE8359:
 	.size	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, .-_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev
 	.set	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
@@ -2658,7 +3302,7 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.type	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, @function
 _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
-.LFB8353:
+.LFB8362:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2672,7 +3316,7 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8353:
+.LFE8362:
 	.size	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, .-_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev
 	.set	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
@@ -2681,7 +3325,7 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ERKS3_
 	.type	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ERKS3_, @function
 _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ERKS3_:
-.LFB8356:
+.LFB8365:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2702,7 +3346,7 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ERKS3_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8356:
+.LFE8365:
 	.size	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ERKS3_, .-_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ERKS3_
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC1ERKS3_
 	.set	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC1ERKS3_,_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ERKS3_
@@ -2711,7 +3355,7 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EEC2ERKS3_:
 	.weak	_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE5beginEv
 	.type	_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE5beginEv, @function
 _ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE5beginEv:
-.LFB8358:
+.LFB8367:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2726,14 +3370,14 @@ _ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE5beginEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8358:
+.LFE8367:
 	.size	_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE5beginEv, .-_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE5beginEv
 	.section	.text._ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE3endEv,"axG",@progbits,_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE3endEv,comdat
 	.align 2
 	.weak	_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE3endEv
 	.type	_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE3endEv, @function
 _ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE3endEv:
-.LFB8359:
+.LFB8368:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2763,14 +3407,14 @@ _ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE3endEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8359:
+.LFE8368:
 	.size	_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE3endEv, .-_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE3endEv
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_range_initializeIPKS2_EEvT_S8_St20forward_iterator_tag,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_range_initializeIPKS2_EEvT_S8_St20forward_iterator_tag,comdat
 	.align 2
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_range_initializeIPKS2_EEvT_S8_St20forward_iterator_tag
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_range_initializeIPKS2_EEvT_S8_St20forward_iterator_tag, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_range_initializeIPKS2_EEvT_S8_St20forward_iterator_tag:
-.LFB8360:
+.LFB8369:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2832,14 +3476,14 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_range_initialize
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8360:
+.LFE8369:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_range_initializeIPKS2_EEvT_S8_St20forward_iterator_tag, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_range_initializeIPKS2_EEvT_S8_St20forward_iterator_tag
 	.section	.text._ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv,"axG",@progbits,_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv,comdat
 	.align 2
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv
 	.type	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv, @function
 _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv:
-.LFB8361:
+.LFB8370:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2853,13 +3497,13 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_al
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8361:
+.LFE8370:
 	.size	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv, .-_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv
 	.section	.text._ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E,"axG",@progbits,_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E,comdat
 	.weak	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E
 	.type	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E, @function
 _ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E:
-.LFB8362:
+.LFB8371:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2881,14 +3525,14 @@ _ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8362:
+.LFE8371:
 	.size	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E, .-_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E
 	.section	.text._ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEaSEOS3_,"axG",@progbits,_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEaSEOS3_,comdat
 	.align 2
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEaSEOS3_
 	.type	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEaSEOS3_, @function
 _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEaSEOS3_:
-.LFB8363:
+.LFB8372:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2922,13 +3566,13 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEaSEOS3_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8363:
+.LFE8372:
 	.size	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEaSEOS3_, .-_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEaSEOS3_
 	.section	.text._ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_,"axG",@progbits,_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_,comdat
 	.weak	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_
 	.type	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_, @function
 _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_:
-.LFB8364:
+.LFB8373:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2954,14 +3598,14 @@ _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8364:
+.LFE8373:
 	.size	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_, .-_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv,comdat
 	.align 2
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv:
-.LFB8365:
+.LFB8374:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -2983,20 +3627,20 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv:
 	movq	-16(%rbp), %rax
 	movq	-8(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L143
+	je	.L190
 	call	__stack_chk_fail@PLT
-.L143:
+.L190:
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8365:
+.LFE8374:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE3endEv
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv,comdat
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv:
-.LFB8367:
+.LFB8376:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3011,20 +3655,20 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv:
 	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_S_nothrow_relocateESt17integral_constantIbLb1EE
 	movq	-8(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L146
+	je	.L193
 	call	__stack_chk_fail@PLT
-.L146:
+.L193:
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8367:
+.LFE8376:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_S_nothrow_relocateESt17integral_constantIbLb1EE,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_S_nothrow_relocateESt17integral_constantIbLb1EE,comdat
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_S_nothrow_relocateESt17integral_constantIbLb1EE
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_S_nothrow_relocateESt17integral_constantIbLb1EE, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_S_nothrow_relocateESt17integral_constantIbLb1EE:
-.LFB8368:
+.LFB8377:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3037,20 +3681,20 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_S_nothrow_relocate
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8368:
+.LFE8377:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_S_nothrow_relocateESt17integral_constantIbLb1EE, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_S_nothrow_relocateESt17integral_constantIbLb1EE
 	.section	.rodata
-.LC19:
+.LC27:
 	.string	"vector::_M_realloc_insert"
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_,comdat
 	.align 2
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_:
-.LFB8366:
+.LFB8375:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8366
+	.cfi_lsda 0x1b,.LLSDA8375
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -3067,10 +3711,10 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	%rax, -24(%rbp)
 	xorl	%eax, %eax
 	movq	-88(%rbp), %rax
-	leaq	.LC19(%rip), %rdx
+	leaq	.LC27(%rip), %rdx
 	movl	$1, %esi
 	movq	%rax, %rdi
-.LEHB9:
+.LEHB11:
 	call	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_M_check_lenEmPKc
 	movq	%rax, -64(%rbp)
 	movq	-88(%rbp), %rax
@@ -3094,7 +3738,7 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	%rdx, %rsi
 	movq	%rax, %rdi
 	call	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_M_allocateEm
-.LEHE9:
+.LEHE11:
 	movq	%rax, -32(%rbp)
 	movq	-32(%rbp), %rax
 	movq	%rax, -72(%rbp)
@@ -3114,12 +3758,12 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	%rsi, %rdx
 	movq	%rcx, %rsi
 	movq	%rax, %rdi
-.LEHB10:
+.LEHB12:
 	call	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_
 	movq	$0, -72(%rbp)
 	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv
 	testb	%al, %al
-	je	.L150
+	je	.L197
 	movq	-88(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv
@@ -3149,8 +3793,8 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	%rax, %rdi
 	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_relocateEPS2_S5_S5_RS3_
 	movq	%rax, -72(%rbp)
-	jmp	.L151
-.L150:
+	jmp	.L198
+.L197:
 	movq	-88(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv
@@ -3179,13 +3823,13 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	%rbx, %rcx
 	movq	%rax, %rdi
 	call	_ZSt34__uninitialized_move_if_noexcept_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_
-.LEHE10:
+.LEHE12:
 	movq	%rax, -72(%rbp)
-.L151:
+.L198:
 	call	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE15_S_use_relocateEv
 	xorl	$1, %eax
 	testb	%al, %al
-	je	.L152
+	je	.L199
 	movq	-88(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv
@@ -3194,9 +3838,9 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	-56(%rbp), %rax
 	movq	%rcx, %rsi
 	movq	%rax, %rdi
-.LEHB11:
+.LEHB13:
 	call	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E
-.L152:
+.L199:
 	movq	-88(%rbp), %rax
 	movq	-88(%rbp), %rdx
 	movq	16(%rdx), %rdx
@@ -3209,7 +3853,7 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	%rcx, %rsi
 	movq	%rax, %rdi
 	call	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE13_M_deallocateEPS2_m
-.LEHE11:
+.LEHE13:
 	movq	-88(%rbp), %rax
 	movq	-32(%rbp), %rdx
 	movq	%rdx, (%rax)
@@ -3229,14 +3873,14 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	nop
 	movq	-24(%rbp), %rax
 	subq	%fs:40, %rax
-	je	.L157
-	jmp	.L160
-.L158:
+	je	.L204
+	jmp	.L207
+.L205:
 	endbr64
 	movq	%rax, %rdi
 	call	__cxa_begin_catch@PLT
 	cmpq	$0, -72(%rbp)
-	jne	.L154
+	jne	.L201
 	movq	-40(%rbp), %rdx
 	movq	%rdx, %rax
 	salq	$2, %rax
@@ -3249,8 +3893,8 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	%rdx, %rsi
 	movq	%rax, %rdi
 	call	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE7destroyIS2_EEvRS3_PT_
-	jmp	.L155
-.L154:
+	jmp	.L202
+.L201:
 	movq	-88(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv
@@ -3259,9 +3903,9 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	-32(%rbp), %rax
 	movq	%rcx, %rsi
 	movq	%rax, %rdi
-.LEHB12:
+.LEHB14:
 	call	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_EvT_S4_RSaIT0_E
-.L155:
+.L202:
 	movq	-88(%rbp), %rax
 	movq	-64(%rbp), %rdx
 	movq	-32(%rbp), %rcx
@@ -3269,62 +3913,62 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	movq	%rax, %rdi
 	call	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE13_M_deallocateEPS2_m
 	call	__cxa_rethrow@PLT
-.LEHE12:
-.L159:
+.LEHE14:
+.L206:
 	endbr64
 	movq	%rax, %rbx
 	call	__cxa_end_catch@PLT
 	movq	%rbx, %rax
 	movq	%rax, %rdi
-.LEHB13:
+.LEHB15:
 	call	_Unwind_Resume@PLT
-.LEHE13:
-.L160:
+.LEHE15:
+.L207:
 	call	__stack_chk_fail@PLT
-.L157:
+.L204:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8366:
+.LFE8375:
 	.section	.gcc_except_table
 	.align 4
-.LLSDA8366:
+.LLSDA8375:
 	.byte	0xff
 	.byte	0x9b
-	.uleb128 .LLSDATT8366-.LLSDATTD8366
-.LLSDATTD8366:
+	.uleb128 .LLSDATT8375-.LLSDATTD8375
+.LLSDATTD8375:
 	.byte	0x1
-	.uleb128 .LLSDACSE8366-.LLSDACSB8366
-.LLSDACSB8366:
-	.uleb128 .LEHB9-.LFB8366
-	.uleb128 .LEHE9-.LEHB9
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB10-.LFB8366
-	.uleb128 .LEHE10-.LEHB10
-	.uleb128 .L158-.LFB8366
-	.uleb128 0x1
-	.uleb128 .LEHB11-.LFB8366
+	.uleb128 .LLSDACSE8375-.LLSDACSB8375
+.LLSDACSB8375:
+	.uleb128 .LEHB11-.LFB8375
 	.uleb128 .LEHE11-.LEHB11
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB12-.LFB8366
+	.uleb128 .LEHB12-.LFB8375
 	.uleb128 .LEHE12-.LEHB12
-	.uleb128 .L159-.LFB8366
-	.uleb128 0
-	.uleb128 .LEHB13-.LFB8366
+	.uleb128 .L205-.LFB8375
+	.uleb128 0x1
+	.uleb128 .LEHB13-.LFB8375
 	.uleb128 .LEHE13-.LEHB13
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8366:
+	.uleb128 .LEHB14-.LFB8375
+	.uleb128 .LEHE14-.LEHB14
+	.uleb128 .L206-.LFB8375
+	.uleb128 0
+	.uleb128 .LEHB15-.LFB8375
+	.uleb128 .LEHE15-.LEHB15
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE8375:
 	.byte	0x1
 	.byte	0
 	.align 4
 	.long	0
 
-.LLSDATT8366:
+.LLSDATT8375:
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_,comdat
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJRKS2_EEEvN9__gnu_cxx17__normal_iteratorIPS2_S4_EEDpOT_
 	.section	.text._ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS2_,"axG",@progbits,_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC5ERKS2_,comdat
@@ -3332,7 +3976,7 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_M_realloc_insertIJ
 	.weak	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS2_
 	.type	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS2_, @function
 _ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS2_:
-.LFB8372:
+.LFB8381:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3353,7 +3997,7 @@ _ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS2_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8372:
+.LFE8381:
 	.size	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS2_, .-_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS2_
 	.weak	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERKS2_
 	.set	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERKS2_,_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS2_
@@ -3362,7 +4006,7 @@ _ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS2_:
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE13_M_deallocateEPS2_m
 	.type	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE13_M_deallocateEPS2_m, @function
 _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE13_M_deallocateEPS2_m:
-.LFB8377:
+.LFB8386:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3375,34 +4019,266 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE13_M_deallocat
 	movq	%rsi, -16(%rbp)
 	movq	%rdx, -24(%rbp)
 	cmpq	$0, -16(%rbp)
-	je	.L164
+	je	.L211
 	movq	-8(%rbp), %rax
 	movq	-24(%rbp), %rdx
 	movq	-16(%rbp), %rcx
 	movq	%rcx, %rsi
 	movq	%rax, %rdi
 	call	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE10deallocateERS3_PS2_m
-.L164:
+.L211:
 	nop
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8377:
+.LFE8386:
 	.size	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE13_M_deallocateEPS2_m, .-_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE13_M_deallocateEPS2_m
+	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv,comdat
+	.align 2
+	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv
+	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv, @function
+_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv:
+.LFB8388:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv
+	movq	%rax, %rdi
+	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8388:
+	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv
+	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4sizeEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4sizeEv,comdat
+	.align 2
+	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4sizeEv
+	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4sizeEv, @function
+_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4sizeEv:
+.LFB8387:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	pushq	%rbx
+	subq	$24, %rsp
+	.cfi_offset 3, -24
+	movq	%rdi, -24(%rbp)
+	movq	-24(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv
+	movq	%rax, %rbx
+	movq	-24(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv
+	imulq	%rbx, %rax
+	movq	-8(%rbp), %rbx
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8387:
+	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4sizeEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4sizeEv
+	.section	.text._ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED2Ev,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED5Ev,comdat
+	.align 2
+	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED2Ev
+	.type	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED2Ev, @function
+_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED2Ev:
+.LFB8392:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev
+	nop
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8392:
+	.size	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED2Ev, .-_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED2Ev
+	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED1Ev
+	.set	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED1Ev,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED2Ev
+	.section	.text._ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED5Ev,comdat
+	.align 2
+	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev
+	.type	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev, @function
+_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev:
+.LFB8394:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEED2Ev
+	nop
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8394:
+	.size	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev, .-_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev
+	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED1Ev
+	.set	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED1Ev,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev
+	.section	.text._ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EE8coeffRefEl,"axG",@progbits,_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EE8coeffRefEl,comdat
+	.align 2
+	.weak	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EE8coeffRefEl
+	.type	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EE8coeffRefEl, @function
+_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EE8coeffRefEl:
+.LFB8389:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	pushq	%rbx
+	subq	$40, %rsp
+	.cfi_offset 3, -24
+	movq	%rdi, -40(%rbp)
+	movq	%rsi, -48(%rbp)
+	movq	%fs:40, %rax
+	movq	%rax, -24(%rbp)
+	xorl	%eax, %eax
+	movq	-40(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZN5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv
+	movq	%rax, %rdx
+	leaq	-32(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC1ERKS3_
+	movq	-48(%rbp), %rdx
+	leaq	-32(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEE8coeffRefEl
+	movq	%rax, %rbx
+	nop
+	leaq	-32(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED1Ev
+	movq	%rbx, %rax
+	movq	-24(%rbp), %rdx
+	subq	%fs:40, %rdx
+	je	.L220
+	call	__stack_chk_fail@PLT
+.L220:
+	movq	-8(%rbp), %rbx
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8389:
+	.size	_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EE8coeffRefEl, .-_ZN5Eigen15DenseCoeffsBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEELi1EE8coeffRefEl
+	.section	.text._ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEmiEl,"axG",@progbits,_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEmiEl,comdat
+	.align 2
+	.weak	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEmiEl
+	.type	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEmiEl, @function
+_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEmiEl:
+.LFB8396:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$48, %rsp
+	movq	%rdi, -40(%rbp)
+	movq	%rsi, -48(%rbp)
+	movq	%fs:40, %rax
+	movq	%rax, -8(%rbp)
+	xorl	%eax, %eax
+	movq	-40(%rbp), %rax
+	movq	(%rax), %rcx
+	movq	-48(%rbp), %rdx
+	movq	%rdx, %rax
+	salq	$2, %rax
+	addq	%rdx, %rax
+	salq	$3, %rax
+	negq	%rax
+	addq	%rcx, %rax
+	movq	%rax, -24(%rbp)
+	leaq	-24(%rbp), %rdx
+	leaq	-16(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC1ERKS4_
+	movq	-16(%rbp), %rax
+	movq	-8(%rbp), %rdx
+	subq	%fs:40, %rdx
+	je	.L223
+	call	__stack_chk_fail@PLT
+.L223:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8396:
+	.size	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEmiEl, .-_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEmiEl
+	.section	.text._ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEdeEv,"axG",@progbits,_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEdeEv,comdat
+	.align 2
+	.weak	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEdeEv
+	.type	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEdeEv, @function
+_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEdeEv:
+.LFB8397:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	(%rax), %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8397:
+	.size	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEdeEv, .-_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEdeEv
 	.section	.rodata
 	.align 8
-.LC20:
+.LC28:
 	.string	"Eigen::CommaInitializer<MatrixType>::CommaInitializer(XprType&, const Scalar&) [with XprType = Eigen::Matrix<double, 5, 1>; Eigen::CommaInitializer<MatrixType>::Scalar = double]"
 	.align 8
-.LC21:
+.LC29:
 	.string	"m_xpr.rows() > 0 && m_xpr.cols() > 0 && \"Cannot comma-initialize a 0x0 matrix (operator<<)\""
 	.section	.text._ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERS2_RKd,"axG",@progbits,_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC5ERS2_RKd,comdat
 	.align 2
 	.weak	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERS2_RKd
 	.type	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERS2_RKd, @function
 _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERS2_RKd:
-.LFB8381:
+.LFB8401:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3428,23 +4304,23 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERS2_RKd:
 	movq	%rax, %rdi
 	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv
 	testq	%rax, %rax
-	jle	.L166
+	jle	.L227
 	movq	-8(%rbp), %rax
 	movq	(%rax), %rax
 	movq	%rax, %rdi
 	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv
 	testq	%rax, %rax
-	jg	.L169
-.L166:
-	leaq	.LC20(%rip), %rax
+	jg	.L230
+.L227:
+	leaq	.LC28(%rip), %rax
 	movq	%rax, %rcx
 	movl	$36, %edx
-	leaq	.LC15(%rip), %rax
+	leaq	.LC23(%rip), %rax
 	movq	%rax, %rsi
-	leaq	.LC21(%rip), %rax
+	leaq	.LC29(%rip), %rax
 	movq	%rax, %rdi
 	call	__assert_fail@PLT
-.L169:
+.L230:
 	nop
 	movq	-8(%rbp), %rax
 	movq	(%rax), %rax
@@ -3460,23 +4336,23 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERS2_RKd:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8381:
+.LFE8401:
 	.size	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERS2_RKd, .-_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERS2_RKd
 	.weak	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERS2_RKd
 	.set	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERS2_RKd,_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERS2_RKd
 	.section	.rodata
 	.align 8
-.LC22:
+.LC30:
 	.string	"XprType& Eigen::CommaInitializer<MatrixType>::finished() [with XprType = Eigen::Matrix<double, 5, 1>]"
 	.align 8
-.LC23:
+.LC31:
 	.string	"((m_row+m_currentBlockRows) == m_xpr.rows() || m_xpr.cols() == 0) && m_col == m_xpr.cols() && \"Too few coefficients passed to comma initializer (operator<<)\""
 	.section	.text._ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv,"axG",@progbits,_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv,comdat
 	.align 2
 	.weak	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv
 	.type	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv, @function
 _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv:
-.LFB8386:
+.LFB8406:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3498,14 +4374,14 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv:
 	movq	%rax, %rdi
 	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv
 	cmpq	%rax, %rbx
-	je	.L171
+	je	.L232
 	movq	-24(%rbp), %rax
 	movq	(%rax), %rax
 	movq	%rax, %rdi
 	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv
 	testq	%rax, %rax
-	jne	.L172
-.L171:
+	jne	.L233
+.L232:
 	movq	-24(%rbp), %rax
 	movq	16(%rax), %rbx
 	movq	-24(%rbp), %rax
@@ -3513,17 +4389,17 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv:
 	movq	%rax, %rdi
 	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv
 	cmpq	%rax, %rbx
-	je	.L176
-.L172:
-	leaq	.LC22(%rip), %rax
+	je	.L237
+.L233:
+	leaq	.LC30(%rip), %rax
 	movq	%rax, %rcx
 	movl	$122, %edx
-	leaq	.LC15(%rip), %rax
-	movq	%rax, %rsi
 	leaq	.LC23(%rip), %rax
+	movq	%rax, %rsi
+	leaq	.LC31(%rip), %rax
 	movq	%rax, %rdi
 	call	__assert_fail@PLT
-.L176:
+.L237:
 	nop
 	movq	-24(%rbp), %rax
 	movq	(%rax), %rax
@@ -3532,14 +4408,14 @@ _ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8386:
+.LFE8406:
 	.size	_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv, .-_ZN5Eigen16CommaInitializerINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8finishedEv
 	.section	.text._ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv,"axG",@progbits,_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv
 	.type	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv, @function
 _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv:
-.LFB8387:
+.LFB8407:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3554,14 +4430,14 @@ _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8387:
+.LFE8407:
 	.size	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv, .-_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv
 	.section	.text._ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv,"axG",@progbits,_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv
 	.type	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv, @function
 _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv:
-.LFB8388:
+.LFB8408:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3576,14 +4452,14 @@ _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8388:
+.LFE8408:
 	.size	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv, .-_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4rowsEv
 	.section	.text._ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8coeffRefEll,"axG",@progbits,_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8coeffRefEll,comdat
 	.align 2
 	.weak	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8coeffRefEll
 	.type	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8coeffRefEll, @function
 _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8coeffRefEll:
-.LFB8389:
+.LFB8409:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3613,14 +4489,14 @@ _ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8coeffRefEll:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8389:
+.LFE8409:
 	.size	_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8coeffRefEll, .-_ZN5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8coeffRefEll
 	.section	.text._ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev,"axG",@progbits,_ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
 	.type	_ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev, @function
 _ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
-.LFB8439:
+.LFB8459:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3634,7 +4510,7 @@ _ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8439:
+.LFE8459:
 	.size	_ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev, .-_ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
 	.weak	_ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1Ev
 	.set	_ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1Ev,_ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
@@ -3643,7 +4519,7 @@ _ZN5Eigen9DenseBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
 	.weak	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC2Ev
 	.type	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC2Ev, @function
 _ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC2Ev:
-.LFB8442:
+.LFB8462:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3661,7 +4537,7 @@ _ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8442:
+.LFE8462:
 	.size	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC2Ev, .-_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC2Ev
 	.weak	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC1Ev
 	.set	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC1Ev,_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC2Ev
@@ -3670,7 +4546,7 @@ _ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EEC2Ev:
 	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv
 	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv, @function
 _ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv:
-.LFB8444:
+.LFB8464:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3689,14 +4565,14 @@ _ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8444:
+.LFE8464:
 	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4colsEv
 	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv
 	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv, @function
 _ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv:
-.LFB8445:
+.LFB8465:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3710,14 +4586,14 @@ _ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8445:
+.LFE8465:
 	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv
 	.section	.text._ZN5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv,"axG",@progbits,_ZN5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv,comdat
 	.align 2
 	.weak	_ZN5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv
 	.type	_ZN5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv, @function
 _ZN5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv:
-.LFB8446:
+.LFB8466:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3731,14 +4607,14 @@ _ZN5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8446:
+.LFE8466:
 	.size	_ZN5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv, .-_ZN5Eigen9EigenBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7derivedEv
 	.section	.text._ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC5ERKS3_,comdat
 	.align 2
 	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_
 	.type	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_, @function
 _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_:
-.LFB8448:
+.LFB8468:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3759,7 +4635,7 @@ _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8448:
+.LFE8468:
 	.size	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_, .-_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_
 	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERKS3_
 	.set	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERKS3_,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_
@@ -3768,7 +4644,7 @@ _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS3_:
 	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.type	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, @function
 _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
-.LFB8451:
+.LFB8471:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3782,7 +4658,7 @@ _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8451:
+.LFE8471:
 	.size	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev, .-_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev
 	.set	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
@@ -3791,7 +4667,7 @@ _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev:
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEE8coeffRefEl
 	.type	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEE8coeffRefEl, @function
 _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEE8coeffRefEl:
-.LFB8453:
+.LFB8473:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3810,14 +4686,14 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8453:
+.LFE8473:
 	.size	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEE8coeffRefEl, .-_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEE8coeffRefEl
 	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv
 	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv, @function
 _ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv:
-.LFB8454:
+.LFB8474:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3836,14 +4712,14 @@ _ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8454:
+.LFE8474:
 	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv
 	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv
 	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv, @function
 _ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv:
-.LFB8455:
+.LFB8475:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3857,14 +4733,14 @@ _ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8455:
+.LFE8475:
 	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv
 	.section	.text._ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv,"axG",@progbits,_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv
 	.type	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv, @function
 _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv:
-.LFB8456:
+.LFB8476:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3879,14 +4755,14 @@ _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8456:
+.LFE8476:
 	.size	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv, .-_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4rowsEv
 	.section	.text._ZN5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv,"axG",@progbits,_ZN5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv,comdat
 	.align 2
 	.weak	_ZN5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv
 	.type	_ZN5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv, @function
 _ZN5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv:
-.LFB8457:
+.LFB8477:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3900,14 +4776,14 @@ _ZN5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8457:
+.LFE8477:
 	.size	_ZN5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv, .-_ZN5Eigen9EigenBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE7derivedEv
 	.section	.text._ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2ERKS3_,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC5ERKS3_,comdat
 	.align 2
 	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2ERKS3_
 	.type	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2ERKS3_, @function
 _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2ERKS3_:
-.LFB8459:
+.LFB8479:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3928,7 +4804,7 @@ _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2ERKS3_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8459:
+.LFE8479:
 	.size	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2ERKS3_, .-_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2ERKS3_
 	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1ERKS3_
 	.set	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1ERKS3_,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2ERKS3_
@@ -3937,7 +4813,7 @@ _ZN5Eigen8internal9evaluatorINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2ERKS3_:
 	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev
 	.type	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev, @function
 _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev:
-.LFB8462:
+.LFB8482:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3951,7 +4827,7 @@ _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8462:
+.LFE8482:
 	.size	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev, .-_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev
 	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED1Ev
 	.set	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED1Ev,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev
@@ -3960,7 +4836,7 @@ _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev:
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEE8coeffRefEl
 	.type	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEE8coeffRefEl, @function
 _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEE8coeffRefEl:
-.LFB8464:
+.LFB8484:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -3979,14 +4855,14 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8464:
+.LFE8484:
 	.size	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEE8coeffRefEl, .-_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEE8coeffRefEl
 	.section	.text._ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev,"axG",@progbits,_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.type	_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, @function
 _ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
-.LFB8467:
+.LFB8487:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4000,7 +4876,7 @@ _ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8467:
+.LFE8487:
 	.size	_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, .-_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.weak	_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev
 	.set	_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev,_ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
@@ -4009,7 +4885,7 @@ _ZN5Eigen9DenseBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.weak	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC2Ev
 	.type	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC2Ev, @function
 _ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC2Ev:
-.LFB8470:
+.LFB8490:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4027,7 +4903,7 @@ _ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8470:
+.LFE8490:
 	.size	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC2Ev, .-_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC2Ev
 	.weak	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC1Ev
 	.set	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC1Ev,_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC2Ev
@@ -4035,7 +4911,7 @@ _ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEC2Ev:
 	.weak	_ZSt4moveIRN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEEEONSt16remove_referenceIT_E4typeEOS5_
 	.type	_ZSt4moveIRN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEEEONSt16remove_referenceIT_E4typeEOS5_, @function
 _ZSt4moveIRN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEEEONSt16remove_referenceIT_E4typeEOS5_:
-.LFB8472:
+.LFB8492:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4049,14 +4925,14 @@ _ZSt4moveIRN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEEEONSt16remove_referenceIT_E4
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8472:
+.LFE8492:
 	.size	_ZSt4moveIRN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEEEONSt16remove_referenceIT_E4typeEOS5_, .-_ZSt4moveIRN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EEEEONSt16remove_referenceIT_E4typeEOS5_
 	.section	.text._ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC2ERKS3_,"axG",@progbits,_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC5ERKS3_,comdat
 	.align 2
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC2ERKS3_
 	.type	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC2ERKS3_, @function
 _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC2ERKS3_:
-.LFB8474:
+.LFB8494:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4080,7 +4956,7 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_impl
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8474:
+.LFE8494:
 	.size	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC2ERKS3_, .-_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC2ERKS3_
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC1ERKS3_
 	.set	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC1ERKS3_,_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_implC2ERKS3_
@@ -4089,7 +4965,7 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_Vector_impl
 	.weak	_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv
 	.type	_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv, @function
 _ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv:
-.LFB8476:
+.LFB8496:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4104,13 +4980,13 @@ _ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8476:
+.LFE8496:
 	.size	_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv, .-_ZNKSt16initializer_listIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4sizeEv
 	.section	.text._ZSt8distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_,"axG",@progbits,_ZSt8distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_,comdat
 	.weak	_ZSt8distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_
 	.type	_ZSt8distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_, @function
 _ZSt8distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_:
-.LFB8477:
+.LFB8497:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4133,17 +5009,17 @@ _ZSt8distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E1
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8477:
+.LFE8497:
 	.size	_ZSt8distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_, .-_ZSt8distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_
 	.section	.rodata
 	.align 8
-.LC24:
+.LC32:
 	.string	"cannot create std::vector larger than max_size()"
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_S_check_init_lenEmRKS3_,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_S_check_init_lenEmRKS3_,comdat
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_S_check_init_lenEmRKS3_
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_S_check_init_lenEmRKS3_, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_S_check_init_lenEmRKS3_:
-.LFB8478:
+.LFB8498:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4173,30 +5049,30 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_S_check_init_lenEm
 	movq	%rax, %rdi
 	call	_ZNSaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED1Ev
 	testb	%bl, %bl
-	je	.L217
-	leaq	.LC24(%rip), %rax
+	je	.L278
+	leaq	.LC32(%rip), %rax
 	movq	%rax, %rdi
 	call	_ZSt20__throw_length_errorPKc@PLT
-.L217:
+.L278:
 	movq	-40(%rbp), %rax
 	movq	-24(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L219
+	je	.L280
 	call	__stack_chk_fail@PLT
-.L219:
+.L280:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8478:
+.LFE8498:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_S_check_init_lenEmRKS3_, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_S_check_init_lenEmRKS3_
 	.section	.text._ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_M_allocateEm,"axG",@progbits,_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_M_allocateEm,comdat
 	.align 2
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_M_allocateEm
 	.type	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_M_allocateEm, @function
 _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_M_allocateEm:
-.LFB8479:
+.LFB8499:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4208,27 +5084,27 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_M_allocateE
 	movq	%rdi, -8(%rbp)
 	movq	%rsi, -16(%rbp)
 	cmpq	$0, -16(%rbp)
-	je	.L221
+	je	.L282
 	movq	-8(%rbp), %rax
 	movq	-16(%rbp), %rdx
 	movq	%rdx, %rsi
 	movq	%rax, %rdi
 	call	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8allocateERS3_m
-	jmp	.L223
-.L221:
+	jmp	.L284
+.L282:
 	movl	$0, %eax
-.L223:
+.L284:
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8479:
+.LFE8499:
 	.size	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_M_allocateEm, .-_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_M_allocateEm
 	.section	.text._ZSt22__uninitialized_copy_aIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_S2_ET0_T_S7_S6_RSaIT1_E,"axG",@progbits,_ZSt22__uninitialized_copy_aIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_S2_ET0_T_S7_S6_RSaIT1_E,comdat
 	.weak	_ZSt22__uninitialized_copy_aIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_S2_ET0_T_S7_S6_RSaIT1_E
 	.type	_ZSt22__uninitialized_copy_aIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_S2_ET0_T_S7_S6_RSaIT1_E, @function
 _ZSt22__uninitialized_copy_aIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_S2_ET0_T_S7_S6_RSaIT1_E:
-.LFB8480:
+.LFB8500:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4251,13 +5127,13 @@ _ZSt22__uninitialized_copy_aIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_S2_ET0_
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8480:
+.LFE8500:
 	.size	_ZSt22__uninitialized_copy_aIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_S2_ET0_T_S7_S6_RSaIT1_E, .-_ZSt22__uninitialized_copy_aIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_S2_ET0_T_S7_S6_RSaIT1_E
 	.section	.text._ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_,"axG",@progbits,_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_,comdat
 	.weak	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_
 	.type	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_, @function
 _ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_:
-.LFB8481:
+.LFB8501:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4278,13 +5154,13 @@ _ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8481:
+.LFE8501:
 	.size	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_, .-_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_
 	.section	.text._ZSt7forwardIRKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS5_E4typeE,"axG",@progbits,_ZSt7forwardIRKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS5_E4typeE,comdat
 	.weak	_ZSt7forwardIRKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS5_E4typeE
 	.type	_ZSt7forwardIRKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS5_E4typeE, @function
 _ZSt7forwardIRKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS5_E4typeE:
-.LFB8482:
+.LFB8502:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4298,17 +5174,17 @@ _ZSt7forwardIRKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceI
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8482:
+.LFE8502:
 	.size	_ZSt7forwardIRKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS5_E4typeE, .-_ZSt7forwardIRKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS5_E4typeE
 	.section	.text._ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JRKS3_EEEvPT_DpOT0_,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JRKS3_EEEvPT_DpOT0_,comdat
 	.align 2
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JRKS3_EEEvPT_DpOT0_
 	.type	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JRKS3_EEEvPT_DpOT0_, @function
 _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JRKS3_EEEvPT_DpOT0_:
-.LFB8483:
+.LFB8503:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8483
+	.cfi_lsda 0x1b,.LLSDA8503
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -4336,11 +5212,11 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS
 	movq	%rax, %r12
 	movq	%r13, %rsi
 	movq	%r12, %rdi
-.LEHB14:
+.LEHB16:
 	call	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC1ERKS1_
-.LEHE14:
-	jmp	.L232
-.L231:
+.LEHE16:
+	jmp	.L293
+.L292:
 	endbr64
 	movq	%rax, %r13
 	movq	%rbx, %rsi
@@ -4348,10 +5224,10 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS
 	call	_ZdlPvS_
 	movq	%r13, %rax
 	movq	%rax, %rdi
-.LEHB15:
+.LEHB17:
 	call	_Unwind_Resume@PLT
-.LEHE15:
-.L232:
+.LEHE17:
+.L293:
 	addq	$40, %rsp
 	popq	%rbx
 	popq	%r12
@@ -4360,23 +5236,23 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8483:
+.LFE8503:
 	.section	.gcc_except_table
-.LLSDA8483:
+.LLSDA8503:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8483-.LLSDACSB8483
-.LLSDACSB8483:
-	.uleb128 .LEHB14-.LFB8483
-	.uleb128 .LEHE14-.LEHB14
-	.uleb128 .L231-.LFB8483
+	.uleb128 .LLSDACSE8503-.LLSDACSB8503
+.LLSDACSB8503:
+	.uleb128 .LEHB16-.LFB8503
+	.uleb128 .LEHE16-.LEHB16
+	.uleb128 .L292-.LFB8503
 	.uleb128 0
-	.uleb128 .LEHB15-.LFB8483
-	.uleb128 .LEHE15-.LEHB15
+	.uleb128 .LEHB17-.LFB8503
+	.uleb128 .LEHE17-.LEHB17
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8483:
+.LLSDACSE8503:
 	.section	.text._ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JRKS3_EEEvPT_DpOT0_,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JRKS3_EEEvPT_DpOT0_,comdat
 	.size	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JRKS3_EEEvPT_DpOT0_, .-_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JRKS3_EEEvPT_DpOT0_
 	.section	.text._ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC2ERKS4_,"axG",@progbits,_ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC5ERKS4_,comdat
@@ -4384,7 +5260,7 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS
 	.weak	_ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC2ERKS4_
 	.type	_ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC2ERKS4_, @function
 _ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC2ERKS4_:
-.LFB8485:
+.LFB8505:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4403,7 +5279,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vecto
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8485:
+.LFE8505:
 	.size	_ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC2ERKS4_, .-_ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC2ERKS4_
 	.weak	_ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC1ERKS4_
 	.set	_ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC1ERKS4_,_ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEC2ERKS4_
@@ -4412,7 +5288,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vecto
 	.weak	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_M_check_lenEmPKc
 	.type	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_M_check_lenEmPKc, @function
 _ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_M_check_lenEmPKc:
-.LFB8487:
+.LFB8507:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4442,11 +5318,11 @@ _ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_M_check_lenEmPKc:
 	cmpq	%rax, %rdx
 	setb	%al
 	testb	%al, %al
-	je	.L235
+	je	.L296
 	movq	-72(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZSt20__throw_length_errorPKc@PLT
-.L235:
+.L296:
 	movq	-56(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv
@@ -4467,38 +5343,38 @@ _ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_M_check_lenEmPKc:
 	movq	%rax, %rdi
 	call	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv
 	cmpq	%rax, -32(%rbp)
-	jb	.L236
+	jb	.L297
 	movq	-56(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv
 	cmpq	%rax, -32(%rbp)
-	jbe	.L237
-.L236:
+	jbe	.L298
+.L297:
 	movq	-56(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv
-	jmp	.L238
-.L237:
+	jmp	.L299
+.L298:
 	movq	-32(%rbp), %rax
-.L238:
+.L299:
 	movq	-24(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L240
+	je	.L301
 	call	__stack_chk_fail@PLT
-.L240:
+.L301:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8487:
+.LFE8507:
 	.size	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_M_check_lenEmPKc, .-_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE12_M_check_lenEmPKc
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE5beginEv,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE5beginEv,comdat
 	.align 2
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE5beginEv
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE5beginEv, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE5beginEv:
-.LFB8488:
+.LFB8508:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4519,20 +5395,20 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE5beginEv:
 	movq	-16(%rbp), %rax
 	movq	-8(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L243
+	je	.L304
 	call	__stack_chk_fail@PLT
-.L243:
+.L304:
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8488:
+.LFE8508:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE5beginEv, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE5beginEv
 	.section	.text._ZN9__gnu_cxxmiIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSB_SE_,"axG",@progbits,_ZN9__gnu_cxxmiIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSB_SE_,comdat
 	.weak	_ZN9__gnu_cxxmiIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSB_SE_
 	.type	_ZN9__gnu_cxxmiIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSB_SE_, @function
 _ZN9__gnu_cxxmiIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSB_SE_:
-.LFB8489:
+.LFB8509:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4564,13 +5440,13 @@ _ZN9__gnu_cxxmiIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEENS
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8489:
+.LFE8509:
 	.size	_ZN9__gnu_cxxmiIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSB_SE_, .-_ZN9__gnu_cxxmiIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSB_SE_
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_relocateEPS2_S5_S5_RS3_,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_relocateEPS2_S5_S5_RS3_,comdat
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_relocateEPS2_S5_S5_RS3_
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_relocateEPS2_S5_S5_RS3_, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_relocateEPS2_S5_S5_RS3_:
-.LFB8490:
+.LFB8510:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4593,14 +5469,14 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_relocateEPS2_S5_
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8490:
+.LFE8510:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_relocateEPS2_S5_S5_RS3_, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_relocateEPS2_S5_S5_RS3_
 	.section	.text._ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEE4baseEv,"axG",@progbits,_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEE4baseEv,comdat
 	.align 2
 	.weak	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEE4baseEv
 	.type	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEE4baseEv, @function
 _ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEE4baseEv:
-.LFB8491:
+.LFB8511:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4614,13 +5490,13 @@ _ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vect
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8491:
+.LFE8511:
 	.size	_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEE4baseEv, .-_ZNK9__gnu_cxx17__normal_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt6vectorIS3_SaIS3_EEE4baseEv
 	.section	.text._ZSt34__uninitialized_move_if_noexcept_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_,"axG",@progbits,_ZSt34__uninitialized_move_if_noexcept_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_,comdat
 	.weak	_ZSt34__uninitialized_move_if_noexcept_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_
 	.type	_ZSt34__uninitialized_move_if_noexcept_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_, @function
 _ZSt34__uninitialized_move_if_noexcept_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_:
-.LFB8492:
+.LFB8512:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4654,13 +5530,13 @@ _ZSt34__uninitialized_move_if_noexcept_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEE
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8492:
+.LFE8512:
 	.size	_ZSt34__uninitialized_move_if_noexcept_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_, .-_ZSt34__uninitialized_move_if_noexcept_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_
 	.section	.text._ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE7destroyIS2_EEvRS3_PT_,"axG",@progbits,_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE7destroyIS2_EEvRS3_PT_,comdat
 	.weak	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE7destroyIS2_EEvRS3_PT_
 	.type	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE7destroyIS2_EEvRS3_PT_, @function
 _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE7destroyIS2_EEvRS3_PT_:
-.LFB8493:
+.LFB8513:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4681,14 +5557,14 @@ _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE7destroyIS2_E
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8493:
+.LFE8513:
 	.size	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE7destroyIS2_EEvRS3_PT_, .-_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE7destroyIS2_EEvRS3_PT_
 	.section	.text._ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS4_,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC5ERKS4_,comdat
 	.align 2
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS4_
 	.type	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS4_, @function
 _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS4_:
-.LFB8495:
+.LFB8515:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4703,7 +5579,7 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS4_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8495:
+.LFE8515:
 	.size	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS4_, .-_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS4_
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERKS4_
 	.set	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ERKS4_,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS4_
@@ -4711,7 +5587,7 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ERKS4_:
 	.weak	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE10deallocateERS3_PS2_m
 	.type	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE10deallocateERS3_PS2_m, @function
 _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE10deallocateERS3_PS2_m:
-.LFB8497:
+.LFB8517:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4734,52 +5610,40 @@ _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE10deallocateE
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8497:
+.LFE8517:
 	.size	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE10deallocateERS3_PS2_m, .-_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE10deallocateERS3_PS2_m
-	.section	.text._ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv,comdat
-	.weak	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv
-	.type	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv, @function
-_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv:
-.LFB8499:
-	.cfi_startproc
-	endbr64
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movl	$1, %eax
-	popq	%rbp
-	.cfi_def_cfa 7, 8
-	ret
-	.cfi_endproc
-.LFE8499:
-	.size	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv, .-_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv
-	.section	.text._ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv,comdat
-	.weak	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv
-	.type	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv, @function
-_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv:
-.LFB8500:
-	.cfi_startproc
-	endbr64
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movl	$5, %eax
-	popq	%rbp
-	.cfi_def_cfa 7, 8
-	ret
-	.cfi_endproc
-.LFE8500:
-	.size	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv, .-_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv
-	.section	.text._ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv,comdat
+	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv,comdat
 	.align 2
-	.weak	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv
-	.type	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv, @function
-_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv:
-.LFB8501:
+	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv
+	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv, @function
+_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv:
+.LFB8518:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv
+	movq	%rax, %rdi
+	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8518:
+	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv
+	.section	.text._ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv,"axG",@progbits,_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv,comdat
+	.align 2
+	.weak	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv
+	.type	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv, @function
+_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv:
+.LFB8519:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4793,24 +5657,205 @@ _ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8501:
+.LFE8519:
+	.size	_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv, .-_ZNK5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv
+	.section	.text._ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv,"axG",@progbits,_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv,comdat
+	.align 2
+	.weak	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv
+	.type	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv, @function
+_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv:
+.LFB8520:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	call	_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4rowsEv
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8520:
+	.size	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv, .-_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4rowsEv
+	.section	.text._ZN5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv,"axG",@progbits,_ZN5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv,comdat
+	.align 2
+	.weak	_ZN5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv
+	.type	_ZN5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv, @function
+_ZN5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv:
+.LFB8521:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8521:
+	.size	_ZN5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv, .-_ZN5Eigen9EigenBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE7derivedEv
+	.section	.text._ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2ERKS3_,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC5ERKS3_,comdat
+	.align 2
+	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2ERKS3_
+	.type	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2ERKS3_, @function
+_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2ERKS3_:
+.LFB8523:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rax
+	movq	-16(%rbp), %rdx
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC2ERKS5_
+	nop
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8523:
+	.size	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2ERKS3_, .-_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2ERKS3_
+	.weak	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC1ERKS3_
+	.set	_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC1ERKS3_,_ZN5Eigen8internal9evaluatorINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2ERKS3_
+	.section	.text._ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev,"axG",@progbits,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED5Ev,comdat
+	.align 2
+	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev
+	.type	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev, @function
+_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev:
+.LFB8526:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8526:
+	.size	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev, .-_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev
+	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED1Ev
+	.set	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED1Ev,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev
+	.section	.text._ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEE8coeffRefEl,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEE8coeffRefEl,comdat
+	.align 2
+	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEE8coeffRefEl
+	.type	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEE8coeffRefEl, @function
+_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEE8coeffRefEl:
+.LFB8528:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rax
+	movq	(%rax), %rdx
+	movq	-16(%rbp), %rax
+	salq	$3, %rax
+	addq	%rdx, %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8528:
+	.size	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEE8coeffRefEl, .-_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEE8coeffRefEl
+	.section	.text._ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv,comdat
+	.weak	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv
+	.type	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv, @function
+_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv:
+.LFB8530:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$1, %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8530:
+	.size	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv, .-_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4colsEv
+	.section	.text._ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv,comdat
+	.weak	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv
+	.type	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv, @function
+_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv:
+.LFB8531:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$5, %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8531:
+	.size	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv, .-_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4rowsEv
+	.section	.text._ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv,comdat
+	.align 2
+	.weak	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv
+	.type	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv, @function
+_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv:
+.LFB8532:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8532:
 	.size	_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv, .-_ZN5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv
 	.section	.rodata
 	.align 8
-.LC25:
+.LC33:
 	.string	"Eigen::internal::plain_array<T, Size, MatrixOrArrayOptions, 16>::plain_array() [with T = double; int Size = 4; int MatrixOrArrayOptions = 0]"
 	.align 8
-.LC26:
+.LC34:
 	.string	"/usr/include/eigen3/Eigen/src/Core/DenseStorage.h"
 	.align 8
-.LC27:
+.LC35:
 	.string	"(internal::UIntPtr(eigen_unaligned_array_assert_workaround_gcc47(array)) & (15)) == 0 && \"this assertion is explained here: \" \"http://eigen.tuxfamily.org/dox-devel/group__TopicUnalignedArrayAssert.html\" \" **** READ THIS WEB PAGE !!! ****\""
 	.section	.text._ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev,"axG",@progbits,_ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev
 	.type	_ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev, @function
 _ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev:
-.LFB8543:
+.LFB8574:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4825,16 +5870,16 @@ _ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev:
 	movq	-8(%rbp), %rax
 	andl	$15, %eax
 	testq	%rax, %rax
-	je	.L266
-	leaq	.LC25(%rip), %rax
+	je	.L339
+	leaq	.LC33(%rip), %rax
 	movq	%rax, %rcx
 	movl	$109, %edx
-	leaq	.LC26(%rip), %rax
+	leaq	.LC34(%rip), %rax
 	movq	%rax, %rsi
-	leaq	.LC27(%rip), %rax
+	leaq	.LC35(%rip), %rax
 	movq	%rax, %rdi
 	call	__assert_fail@PLT
-.L266:
+.L339:
 	nop
 	call	_ZN5Eigen8internal28check_static_allocation_sizeIdLi4EEEvv
 	nop
@@ -4842,7 +5887,7 @@ _ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8543:
+.LFE8574:
 	.size	_ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev, .-_ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev
 	.weak	_ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC1Ev
 	.set	_ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC1Ev,_ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev
@@ -4851,10 +5896,10 @@ _ZN5Eigen8internal11plain_arrayIdLi4ELi0ELi16EEC2Ev:
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEEC2ERKS5_
 	.type	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEEC2ERKS5_, @function
 _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEEC2ERKS5_:
-.LFB8546:
+.LFB8577:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8546
+	.cfi_lsda 0x1b,.LLSDA8577
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -4872,15 +5917,15 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi
 	movq	-24(%rbp), %rbx
 	movq	-32(%rbp), %rax
 	movq	%rax, %rdi
-.LEHB16:
+.LEHB18:
 	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4dataEv
 	movl	$0, %edx
 	movq	%rax, %rsi
 	movq	%rbx, %rdi
 	call	_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC1EPKdl
-.LEHE16:
-	jmp	.L270
-.L269:
+.LEHE18:
+	jmp	.L343
+.L342:
 	endbr64
 	movq	%rax, %rbx
 	movq	-24(%rbp), %rax
@@ -4888,32 +5933,32 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi
 	call	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEED2Ev
 	movq	%rbx, %rax
 	movq	%rax, %rdi
-.LEHB17:
+.LEHB19:
 	call	_Unwind_Resume@PLT
-.LEHE17:
-.L270:
+.LEHE19:
+.L343:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8546:
+.LFE8577:
 	.section	.gcc_except_table
-.LLSDA8546:
+.LLSDA8577:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8546-.LLSDACSB8546
-.LLSDACSB8546:
-	.uleb128 .LEHB16-.LFB8546
-	.uleb128 .LEHE16-.LEHB16
-	.uleb128 .L269-.LFB8546
+	.uleb128 .LLSDACSE8577-.LLSDACSB8577
+.LLSDACSB8577:
+	.uleb128 .LEHB18-.LFB8577
+	.uleb128 .LEHE18-.LEHB18
+	.uleb128 .L342-.LFB8577
 	.uleb128 0
-	.uleb128 .LEHB17-.LFB8546
-	.uleb128 .LEHE17-.LEHB17
+	.uleb128 .LEHB19-.LFB8577
+	.uleb128 .LEHE19-.LEHB19
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8546:
+.LLSDACSE8577:
 	.section	.text._ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEEC2ERKS5_,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEEC5ERKS5_,comdat
 	.size	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEEC2ERKS5_, .-_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEEC2ERKS5_
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEEC1ERKS5_
@@ -4923,7 +5968,7 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi
 	.weak	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv
 	.type	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv, @function
 _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv:
-.LFB8548:
+.LFB8579:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4938,13 +5983,13 @@ _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8548:
+.LFE8579:
 	.size	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv, .-_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4colsEv
 	.section	.text._ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4rowsEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4rowsEv,comdat
 	.weak	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4rowsEv
 	.type	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4rowsEv, @function
 _ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4rowsEv:
-.LFB8549:
+.LFB8580:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -4957,17 +6002,17 @@ _ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4rowsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8549:
+.LFE8580:
 	.size	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4rowsEv, .-_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4rowsEv
 	.section	.text._ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC2ERKS5_,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC5ERKS5_,comdat
 	.align 2
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC2ERKS5_
 	.type	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC2ERKS5_, @function
 _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC2ERKS5_:
-.LFB8551:
+.LFB8582:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8551
+	.cfi_lsda 0x1b,.LLSDA8582
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -4985,15 +6030,15 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi
 	movq	-24(%rbp), %rbx
 	movq	-32(%rbp), %rax
 	movq	%rax, %rdi
-.LEHB18:
+.LEHB20:
 	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4dataEv
 	movl	$0, %edx
 	movq	%rax, %rsi
 	movq	%rbx, %rdi
 	call	_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC1EPKdl
-.LEHE18:
-	jmp	.L278
-.L277:
+.LEHE20:
+	jmp	.L351
+.L350:
 	endbr64
 	movq	%rax, %rbx
 	movq	-24(%rbp), %rax
@@ -5001,32 +6046,32 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi
 	call	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEED2Ev
 	movq	%rbx, %rax
 	movq	%rax, %rdi
-.LEHB19:
+.LEHB21:
 	call	_Unwind_Resume@PLT
-.LEHE19:
-.L278:
+.LEHE21:
+.L351:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8551:
+.LFE8582:
 	.section	.gcc_except_table
-.LLSDA8551:
+.LLSDA8582:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8551-.LLSDACSB8551
-.LLSDACSB8551:
-	.uleb128 .LEHB18-.LFB8551
-	.uleb128 .LEHE18-.LEHB18
-	.uleb128 .L277-.LFB8551
+	.uleb128 .LLSDACSE8582-.LLSDACSB8582
+.LLSDACSB8582:
+	.uleb128 .LEHB20-.LFB8582
+	.uleb128 .LEHE20-.LEHB20
+	.uleb128 .L350-.LFB8582
 	.uleb128 0
-	.uleb128 .LEHB19-.LFB8551
-	.uleb128 .LEHE19-.LEHB19
+	.uleb128 .LEHB21-.LFB8582
+	.uleb128 .LEHE21-.LEHB21
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8551:
+.LLSDACSE8582:
 	.section	.text._ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC2ERKS5_,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC5ERKS5_,comdat
 	.size	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC2ERKS5_, .-_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC2ERKS5_
 	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEEEC1ERKS5_
@@ -5036,7 +6081,7 @@ _ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi
 	.weak	_ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC2Ev
 	.type	_ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC2Ev, @function
 _ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC2Ev:
-.LFB8554:
+.LFB8585:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5052,7 +6097,7 @@ _ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8554:
+.LFE8585:
 	.size	_ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC2Ev, .-_ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC2Ev
 	.weak	_ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC1Ev
 	.set	_ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC1Ev,_ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC2Ev
@@ -5061,7 +6106,7 @@ _ZN5Eigen8internal11plain_arrayIdLi5ELi0ELi0EEC2Ev:
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl_dataC2Ev
 	.type	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl_dataC2Ev, @function
 _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl_dataC2Ev:
-.LFB8557:
+.LFB8588:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5081,7 +6126,7 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8557:
+.LFE8588:
 	.size	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl_dataC2Ev, .-_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl_dataC2Ev
 	.weak	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl_dataC1Ev
 	.set	_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl_dataC1Ev,_ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl_dataC2Ev
@@ -5089,7 +6134,7 @@ _ZNSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE17_Vector_impl
 	.weak	_ZSt19__iterator_categoryIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E17iterator_categoryERKS6_
 	.type	_ZSt19__iterator_categoryIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E17iterator_categoryERKS6_, @function
 _ZSt19__iterator_categoryIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E17iterator_categoryERKS6_:
-.LFB8559:
+.LFB8590:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5103,13 +6148,13 @@ _ZSt19__iterator_categoryIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8559:
+.LFE8590:
 	.size	_ZSt19__iterator_categoryIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E17iterator_categoryERKS6_, .-_ZSt19__iterator_categoryIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E17iterator_categoryERKS6_
 	.section	.text._ZSt10__distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_St26random_access_iterator_tag,"axG",@progbits,_ZSt10__distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_St26random_access_iterator_tag,comdat
 	.weak	_ZSt10__distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_St26random_access_iterator_tag
 	.type	_ZSt10__distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_St26random_access_iterator_tag, @function
 _ZSt10__distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_St26random_access_iterator_tag:
-.LFB8560:
+.LFB8591:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5129,13 +6174,13 @@ _ZSt10__distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8560:
+.LFE8591:
 	.size	_ZSt10__distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_St26random_access_iterator_tag, .-_ZSt10__distanceIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEENSt15iterator_traitsIT_E15difference_typeES6_S6_St26random_access_iterator_tag
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_max_sizeERKS3_,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_max_sizeERKS3_,comdat
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_max_sizeERKS3_
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_max_sizeERKS3_, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_max_sizeERKS3_:
-.LFB8561:
+.LFB8592:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5162,20 +6207,20 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_max_sizeERKS3_:
 	movq	(%rax), %rax
 	movq	-8(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L287
+	je	.L360
 	call	__stack_chk_fail@PLT
-.L287:
+.L360:
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8561:
+.LFE8592:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_max_sizeERKS3_, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE11_S_max_sizeERKS3_
 	.section	.text._ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8allocateERS3_m,"axG",@progbits,_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8allocateERS3_m,comdat
 	.weak	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8allocateERS3_m
 	.type	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8allocateERS3_m, @function
 _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8allocateERS3_m:
-.LFB8562:
+.LFB8593:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5196,13 +6241,13 @@ _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8allocateERS3
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8562:
+.LFE8593:
 	.size	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8allocateERS3_m, .-_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8allocateERS3_m
 	.section	.text._ZSt18uninitialized_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_ET0_T_S7_S6_,"axG",@progbits,_ZSt18uninitialized_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_ET0_T_S7_S6_,comdat
 	.weak	_ZSt18uninitialized_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_ET0_T_S7_S6_
 	.type	_ZSt18uninitialized_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_ET0_T_S7_S6_, @function
 _ZSt18uninitialized_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_ET0_T_S7_S6_:
-.LFB8563:
+.LFB8594:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5225,13 +6270,13 @@ _ZSt18uninitialized_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_ET0_T_S7_S6
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8563:
+.LFE8594:
 	.size	_ZSt18uninitialized_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_ET0_T_S7_S6_, .-_ZSt18uninitialized_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS2_ET0_T_S7_S6_
 	.section	.text._ZNSt12_Destroy_auxILb1EE9__destroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEvT_S6_,"axG",@progbits,_ZNSt12_Destroy_auxILb1EE9__destroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEvT_S6_,comdat
 	.weak	_ZNSt12_Destroy_auxILb1EE9__destroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEvT_S6_
 	.type	_ZNSt12_Destroy_auxILb1EE9__destroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEvT_S6_, @function
 _ZNSt12_Destroy_auxILb1EE9__destroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEvT_S6_:
-.LFB8565:
+.LFB8596:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5246,14 +6291,14 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEvT_
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8565:
+.LFE8596:
 	.size	_ZNSt12_Destroy_auxILb1EE9__destroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEvT_S6_, .-_ZNSt12_Destroy_auxILb1EE9__destroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEEvT_S6_
 	.section	.text._ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv,"axG",@progbits,_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv,comdat
 	.align 2
 	.weak	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv
 	.type	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv, @function
 _ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv:
-.LFB8566:
+.LFB8597:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5272,43 +6317,13 @@ _ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8566:
+.LFE8597:
 	.size	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv, .-_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE8max_sizeEv
-	.section	.text._ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv,"axG",@progbits,_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv,comdat
-	.align 2
-	.weak	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv
-	.type	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv, @function
-_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv:
-.LFB8567:
-	.cfi_startproc
-	endbr64
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movq	%rdi, -8(%rbp)
-	movq	-8(%rbp), %rax
-	movq	8(%rax), %rdx
-	movq	-8(%rbp), %rax
-	movq	(%rax), %rcx
-	movq	%rdx, %rax
-	subq	%rcx, %rax
-	sarq	$3, %rax
-	movq	%rax, %rdx
-	movabsq	$-3689348814741910323, %rax
-	imulq	%rdx, %rax
-	popq	%rbp
-	.cfi_def_cfa 7, 8
-	ret
-	.cfi_endproc
-.LFE8567:
-	.size	_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv, .-_ZNKSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE4sizeEv
 	.section	.text._ZSt3maxImERKT_S2_S2_,"axG",@progbits,_ZSt3maxImERKT_S2_S2_,comdat
 	.weak	_ZSt3maxImERKT_S2_S2_
 	.type	_ZSt3maxImERKT_S2_S2_, @function
 _ZSt3maxImERKT_S2_S2_:
-.LFB8568:
+.LFB8598:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5323,23 +6338,23 @@ _ZSt3maxImERKT_S2_S2_:
 	movq	-16(%rbp), %rax
 	movq	(%rax), %rax
 	cmpq	%rax, %rdx
-	jnb	.L298
+	jnb	.L369
 	movq	-16(%rbp), %rax
-	jmp	.L299
-.L298:
+	jmp	.L370
+.L369:
 	movq	-8(%rbp), %rax
-.L299:
+.L370:
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8568:
+.LFE8598:
 	.size	_ZSt3maxImERKT_S2_S2_, .-_ZSt3maxImERKT_S2_S2_
 	.section	.text._ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE14_S_do_relocateEPS2_S5_S5_RS3_St17integral_constantIbLb1EE,"axG",@progbits,_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE14_S_do_relocateEPS2_S5_S5_RS3_St17integral_constantIbLb1EE,comdat
 	.weak	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE14_S_do_relocateEPS2_S5_S5_RS3_St17integral_constantIbLb1EE
 	.type	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE14_S_do_relocateEPS2_S5_S5_RS3_St17integral_constantIbLb1EE, @function
 _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE14_S_do_relocateEPS2_S5_S5_RS3_St17integral_constantIbLb1EE:
-.LFB8569:
+.LFB8599:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5362,13 +6377,13 @@ _ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE14_S_do_relocateEPS2_
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8569:
+.LFE8599:
 	.size	_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE14_S_do_relocateEPS2_S5_S5_RS3_St17integral_constantIbLb1EE, .-_ZNSt6vectorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE14_S_do_relocateEPS2_S5_S5_RS3_St17integral_constantIbLb1EE
 	.section	.text._ZSt32__make_move_if_noexcept_iteratorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt13move_iteratorIPS2_EET0_PT_,"axG",@progbits,_ZSt32__make_move_if_noexcept_iteratorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt13move_iteratorIPS2_EET0_PT_,comdat
 	.weak	_ZSt32__make_move_if_noexcept_iteratorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt13move_iteratorIPS2_EET0_PT_
 	.type	_ZSt32__make_move_if_noexcept_iteratorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt13move_iteratorIPS2_EET0_PT_, @function
 _ZSt32__make_move_if_noexcept_iteratorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt13move_iteratorIPS2_EET0_PT_:
-.LFB8570:
+.LFB8600:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5389,20 +6404,20 @@ _ZSt32__make_move_if_noexcept_iteratorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt1
 	movq	-16(%rbp), %rax
 	movq	-8(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L304
+	je	.L375
 	call	__stack_chk_fail@PLT
-.L304:
+.L375:
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8570:
+.LFE8600:
 	.size	_ZSt32__make_move_if_noexcept_iteratorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt13move_iteratorIPS2_EET0_PT_, .-_ZSt32__make_move_if_noexcept_iteratorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESt13move_iteratorIPS2_EET0_PT_
 	.section	.text._ZSt22__uninitialized_copy_aISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_S3_ET0_T_S7_S6_RSaIT1_E,"axG",@progbits,_ZSt22__uninitialized_copy_aISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_S3_ET0_T_S7_S6_RSaIT1_E,comdat
 	.weak	_ZSt22__uninitialized_copy_aISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_S3_ET0_T_S7_S6_RSaIT1_E
 	.type	_ZSt22__uninitialized_copy_aISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_S3_ET0_T_S7_S6_RSaIT1_E, @function
 _ZSt22__uninitialized_copy_aISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_S3_ET0_T_S7_S6_RSaIT1_E:
-.LFB8571:
+.LFB8601:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5425,14 +6440,14 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5E
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8571:
+.LFE8601:
 	.size	_ZSt22__uninitialized_copy_aISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_S3_ET0_T_S7_S6_RSaIT1_E, .-_ZSt22__uninitialized_copy_aISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_S3_ET0_T_S7_S6_RSaIT1_E
 	.section	.text._ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7destroyIS3_EEvPT_,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7destroyIS3_EEvPT_,comdat
 	.align 2
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7destroyIS3_EEvPT_
 	.type	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7destroyIS3_EEvPT_, @function
 _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7destroyIS3_EEvPT_:
-.LFB8572:
+.LFB8602:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5447,14 +6462,14 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7destroyIS3_
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8572:
+.LFE8602:
 	.size	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7destroyIS3_EEvPT_, .-_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE7destroyIS3_EEvPT_
 	.section	.text._ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE10deallocateEPS3_m,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE10deallocateEPS3_m,comdat
 	.align 2
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE10deallocateEPS3_m
 	.type	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE10deallocateEPS3_m, @function
 _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE10deallocateEPS3_m:
-.LFB8573:
+.LFB8603:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5481,13 +6496,126 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE10deallocate
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8573:
+.LFE8603:
 	.size	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE10deallocateEPS3_m, .-_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE10deallocateEPS3_m
+	.section	.text._ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv,"axG",@progbits,_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv,comdat
+	.align 2
+	.weak	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv
+	.type	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv, @function
+_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv:
+.LFB8604:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	call	_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4colsEv
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8604:
+	.size	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv, .-_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4colsEv
+	.section	.text._ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4rowsEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4rowsEv,comdat
+	.weak	_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4rowsEv
+	.type	_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4rowsEv, @function
+_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4rowsEv:
+.LFB8605:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$2, %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8605:
+	.size	_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4rowsEv, .-_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4rowsEv
+	.section	.text._ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC2ERKS5_,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC5ERKS5_,comdat
+	.align 2
+	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC2ERKS5_
+	.type	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC2ERKS5_, @function
+_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC2ERKS5_:
+.LFB8607:
+	.cfi_startproc
+	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
+	.cfi_lsda 0x1b,.LLSDA8607
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	pushq	%rbx
+	subq	$24, %rsp
+	.cfi_offset 3, -24
+	movq	%rdi, -24(%rbp)
+	movq	%rsi, -32(%rbp)
+	movq	-24(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2Ev
+	movq	-24(%rbp), %rbx
+	movq	-32(%rbp), %rax
+	movq	%rax, %rdi
+.LEHB22:
+	call	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4dataEv
+	movl	$0, %edx
+	movq	%rax, %rsi
+	movq	%rbx, %rdi
+	call	_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC1EPKdl
+.LEHE22:
+	jmp	.L387
+.L386:
+	endbr64
+	movq	%rax, %rbx
+	movq	-24(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEED2Ev
+	movq	%rbx, %rax
+	movq	%rax, %rdi
+.LEHB23:
+	call	_Unwind_Resume@PLT
+.LEHE23:
+.L387:
+	movq	-8(%rbp), %rbx
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8607:
+	.section	.gcc_except_table
+.LLSDA8607:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE8607-.LLSDACSB8607
+.LLSDACSB8607:
+	.uleb128 .LEHB22-.LFB8607
+	.uleb128 .LEHE22-.LEHB22
+	.uleb128 .L386-.LFB8607
+	.uleb128 0
+	.uleb128 .LEHB23-.LFB8607
+	.uleb128 .LEHE23-.LEHB23
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE8607:
+	.section	.text._ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC2ERKS5_,"axG",@progbits,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC5ERKS5_,comdat
+	.size	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC2ERKS5_, .-_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC2ERKS5_
+	.weak	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC1ERKS5_
+	.set	_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC1ERKS5_,_ZN5Eigen8internal9evaluatorINS_15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEEEC2ERKS5_
 	.section	.text._ZN5Eigen8internal28check_static_allocation_sizeIdLi4EEEvv,"axG",@progbits,_ZN5Eigen8internal28check_static_allocation_sizeIdLi4EEEvv,comdat
 	.weak	_ZN5Eigen8internal28check_static_allocation_sizeIdLi4EEEvv
 	.type	_ZN5Eigen8internal28check_static_allocation_sizeIdLi4EEEvv, @function
 _ZN5Eigen8internal28check_static_allocation_sizeIdLi4EEEvv:
-.LFB8603:
+.LFB8638:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5500,14 +6628,14 @@ _ZN5Eigen8internal28check_static_allocation_sizeIdLi4EEEvv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8603:
+.LFE8638:
 	.size	_ZN5Eigen8internal28check_static_allocation_sizeIdLi4EEEvv, .-_ZN5Eigen8internal28check_static_allocation_sizeIdLi4EEEvv
 	.section	.text._ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4dataEv,"axG",@progbits,_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4dataEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4dataEv
 	.type	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4dataEv, @function
 _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4dataEv:
-.LFB8604:
+.LFB8639:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5524,14 +6652,14 @@ _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4dataEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8604:
+.LFE8639:
 	.size	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4dataEv, .-_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4dataEv
 	.section	.text._ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev,"axG",@progbits,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.type	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, @function
 _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
-.LFB8607:
+.LFB8642:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5545,7 +6673,7 @@ _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8607:
+.LFE8642:
 	.size	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev, .-_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
 	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev
 	.set	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1Ev,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev
@@ -5554,7 +6682,7 @@ _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2Ev:
 	.weak	_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC2EPKdl
 	.type	_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC2EPKdl, @function
 _ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC2EPKdl:
-.LFB8610:
+.LFB8645:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5577,7 +6705,7 @@ _ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC2EPKdl:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8610:
+.LFE8645:
 	.size	_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC2EPKdl, .-_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC2EPKdl
 	.weak	_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC1EPKdl
 	.set	_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC1EPKdl,_ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC2EPKdl
@@ -5585,7 +6713,7 @@ _ZN5Eigen8internal30plainobjectbase_evaluator_dataIdLi0EEC2EPKdl:
 	.weak	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4colsEv
 	.type	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4colsEv, @function
 _ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4colsEv:
-.LFB8612:
+.LFB8647:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5598,14 +6726,14 @@ _ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4colsEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8612:
+.LFE8647:
 	.size	_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4colsEv, .-_ZN5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4colsEv
 	.section	.text._ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4dataEv,"axG",@progbits,_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4dataEv,comdat
 	.align 2
 	.weak	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4dataEv
 	.type	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4dataEv, @function
 _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4dataEv:
-.LFB8613:
+.LFB8648:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5622,14 +6750,14 @@ _ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4dataEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8613:
+.LFE8648:
 	.size	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4dataEv, .-_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEE4dataEv
 	.section	.text._ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev,"axG",@progbits,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC5Ev,comdat
 	.align 2
 	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
 	.type	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev, @function
 _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
-.LFB8616:
+.LFB8651:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5643,7 +6771,7 @@ _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8616:
+.LFE8651:
 	.size	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev, .-_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
 	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1Ev
 	.set	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC1Ev,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev
@@ -5651,7 +6779,7 @@ _ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi4ELi1ELi0ELi4ELi1EEEEC2Ev:
 	.weak	_ZN5Eigen8internal28check_static_allocation_sizeIdLi5EEEvv
 	.type	_ZN5Eigen8internal28check_static_allocation_sizeIdLi5EEEvv, @function
 _ZN5Eigen8internal28check_static_allocation_sizeIdLi5EEEvv:
-.LFB8618:
+.LFB8653:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5664,13 +6792,13 @@ _ZN5Eigen8internal28check_static_allocation_sizeIdLi5EEEvv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8618:
+.LFE8653:
 	.size	_ZN5Eigen8internal28check_static_allocation_sizeIdLi5EEEvv, .-_ZN5Eigen8internal28check_static_allocation_sizeIdLi5EEEvv
 	.section	.text._ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8max_sizeERKS3_,"axG",@progbits,_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8max_sizeERKS3_,comdat
 	.weak	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8max_sizeERKS3_
 	.type	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8max_sizeERKS3_, @function
 _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8max_sizeERKS3_:
-.LFB8619:
+.LFB8654:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5687,13 +6815,13 @@ _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8max_sizeERKS
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8619:
+.LFE8654:
 	.size	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8max_sizeERKS3_, .-_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE8max_sizeERKS3_
 	.section	.text._ZSt3minImERKT_S2_S2_,"axG",@progbits,_ZSt3minImERKT_S2_S2_,comdat
 	.weak	_ZSt3minImERKT_S2_S2_
 	.type	_ZSt3minImERKT_S2_S2_, @function
 _ZSt3minImERKT_S2_S2_:
-.LFB8620:
+.LFB8655:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5708,24 +6836,24 @@ _ZSt3minImERKT_S2_S2_:
 	movq	-8(%rbp), %rax
 	movq	(%rax), %rax
 	cmpq	%rax, %rdx
-	jnb	.L323
+	jnb	.L402
 	movq	-16(%rbp), %rax
-	jmp	.L324
-.L323:
+	jmp	.L403
+.L402:
 	movq	-8(%rbp), %rax
-.L324:
+.L403:
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8620:
+.LFE8655:
 	.size	_ZSt3minImERKT_S2_S2_, .-_ZSt3minImERKT_S2_S2_
 	.section	.text._ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE11_M_max_sizeEv,"axG",@progbits,_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE11_M_max_sizeEv,comdat
 	.align 2
 	.weak	_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE11_M_max_sizeEv
 	.type	_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE11_M_max_sizeEv, @function
 _ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE11_M_max_sizeEv:
-.LFB8622:
+.LFB8657:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5739,14 +6867,14 @@ _ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE11_M_max_si
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8622:
+.LFE8657:
 	.size	_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE11_M_max_sizeEv, .-_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE11_M_max_sizeEv
 	.section	.text._ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8allocateEmPKv,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8allocateEmPKv,comdat
 	.align 2
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8allocateEmPKv
 	.type	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8allocateEmPKv, @function
 _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8allocateEmPKv:
-.LFB8621:
+.LFB8656:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5767,14 +6895,14 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8allocateEmP
 	testq	%rax, %rax
 	setne	%al
 	testb	%al, %al
-	je	.L328
+	je	.L407
 	movabsq	$461168601842738790, %rax
 	cmpq	%rax, -16(%rbp)
-	jbe	.L329
+	jbe	.L408
 	call	_ZSt28__throw_bad_array_new_lengthv@PLT
-.L329:
+.L408:
 	call	_ZSt17__throw_bad_allocv@PLT
-.L328:
+.L407:
 	movq	-16(%rbp), %rdx
 	movq	%rdx, %rax
 	salq	$2, %rax
@@ -5786,16 +6914,16 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8allocateEmP
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8621:
+.LFE8656:
 	.size	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8allocateEmPKv, .-_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8allocateEmPKv
 	.section	.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS4_EET0_T_S9_S8_,"axG",@progbits,_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS4_EET0_T_S9_S8_,comdat
 	.weak	_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS4_EET0_T_S9_S8_
 	.type	_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS4_EET0_T_S9_S8_, @function
 _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS4_EET0_T_S9_S8_:
-.LFB8623:
+.LFB8658:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8623
+	.cfi_lsda 0x1b,.LLSDA8658
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -5810,8 +6938,8 @@ _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0EL
 	movq	%rdx, -56(%rbp)
 	movq	-56(%rbp), %rax
 	movq	%rax, -24(%rbp)
-	jmp	.L332
-.L333:
+	jmp	.L411
+.L412:
 	movq	-24(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_
@@ -5819,18 +6947,18 @@ _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0EL
 	movq	-40(%rbp), %rax
 	movq	%rax, %rsi
 	movq	%rdx, %rdi
-.LEHB20:
+.LEHB24:
 	call	_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_
-.LEHE20:
+.LEHE24:
 	addq	$40, -40(%rbp)
 	addq	$40, -24(%rbp)
-.L332:
+.L411:
 	movq	-40(%rbp), %rax
 	cmpq	-48(%rbp), %rax
-	jne	.L333
+	jne	.L412
 	movq	-24(%rbp), %rax
-	jmp	.L339
-.L337:
+	jmp	.L418
+.L416:
 	endbr64
 	movq	%rax, %rdi
 	call	__cxa_begin_catch@PLT
@@ -5839,54 +6967,54 @@ _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0EL
 	movq	%rdx, %rsi
 	movq	%rax, %rdi
 	call	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_
-.LEHB21:
+.LEHB25:
 	call	__cxa_rethrow@PLT
-.LEHE21:
-.L338:
+.LEHE25:
+.L417:
 	endbr64
 	movq	%rax, %rbx
 	call	__cxa_end_catch@PLT
 	movq	%rbx, %rax
 	movq	%rax, %rdi
-.LEHB22:
+.LEHB26:
 	call	_Unwind_Resume@PLT
-.LEHE22:
-.L339:
+.LEHE26:
+.L418:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8623:
+.LFE8658:
 	.section	.gcc_except_table
 	.align 4
-.LLSDA8623:
+.LLSDA8658:
 	.byte	0xff
 	.byte	0x9b
-	.uleb128 .LLSDATT8623-.LLSDATTD8623
-.LLSDATTD8623:
+	.uleb128 .LLSDATT8658-.LLSDATTD8658
+.LLSDATTD8658:
 	.byte	0x1
-	.uleb128 .LLSDACSE8623-.LLSDACSB8623
-.LLSDACSB8623:
-	.uleb128 .LEHB20-.LFB8623
-	.uleb128 .LEHE20-.LEHB20
-	.uleb128 .L337-.LFB8623
+	.uleb128 .LLSDACSE8658-.LLSDACSB8658
+.LLSDACSB8658:
+	.uleb128 .LEHB24-.LFB8658
+	.uleb128 .LEHE24-.LEHB24
+	.uleb128 .L416-.LFB8658
 	.uleb128 0x1
-	.uleb128 .LEHB21-.LFB8623
-	.uleb128 .LEHE21-.LEHB21
-	.uleb128 .L338-.LFB8623
+	.uleb128 .LEHB25-.LFB8658
+	.uleb128 .LEHE25-.LEHB25
+	.uleb128 .L417-.LFB8658
 	.uleb128 0
-	.uleb128 .LEHB22-.LFB8623
-	.uleb128 .LEHE22-.LEHB22
+	.uleb128 .LEHB26-.LFB8658
+	.uleb128 .LEHE26-.LEHB26
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8623:
+.LLSDACSE8658:
 	.byte	0x1
 	.byte	0
 	.align 4
 	.long	0
 
-.LLSDATT8623:
+.LLSDATT8658:
 	.section	.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS4_EET0_T_S9_S8_,"axG",@progbits,_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS4_EET0_T_S9_S8_,comdat
 	.size	_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS4_EET0_T_S9_S8_, .-_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEPS4_EET0_T_S9_S8_
 	.section	.text._ZNKSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv,"axG",@progbits,_ZNKSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv,comdat
@@ -5894,7 +7022,7 @@ _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKN5Eigen6MatrixIdLi5ELi1ELi0EL
 	.weak	_ZNKSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv
 	.type	_ZNKSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv, @function
 _ZNKSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv:
-.LFB8624:
+.LFB8659:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5908,13 +7036,13 @@ _ZNKSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_a
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8624:
+.LFE8659:
 	.size	_ZNKSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv, .-_ZNKSt12_Vector_baseIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEESaIS2_EE19_M_get_Tp_allocatorEv
 	.section	.text._ZSt12__relocate_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_,"axG",@progbits,_ZSt12__relocate_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_,comdat
 	.weak	_ZSt12__relocate_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_
 	.type	_ZSt12__relocate_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_, @function
 _ZSt12__relocate_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_:
-.LFB8625:
+.LFB8660:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5955,14 +7083,14 @@ _ZSt12__relocate_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8625:
+.LFE8660:
 	.size	_ZSt12__relocate_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_, .-_ZSt12__relocate_aIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_
 	.section	.text._ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ES3_,"axG",@progbits,_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC5ES3_,comdat
 	.align 2
 	.weak	_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ES3_
 	.type	_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ES3_, @function
 _ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ES3_:
-.LFB8627:
+.LFB8662:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -5984,7 +7112,7 @@ _ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ES3_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8627:
+.LFE8662:
 	.size	_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ES3_, .-_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ES3_
 	.weak	_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ES3_
 	.set	_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC1ES3_,_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ES3_
@@ -5992,7 +7120,7 @@ _ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEC2ES3_:
 	.weak	_ZSt18uninitialized_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_ET0_T_S7_S6_
 	.type	_ZSt18uninitialized_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_ET0_T_S7_S6_, @function
 _ZSt18uninitialized_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_ET0_T_S7_S6_:
-.LFB8629:
+.LFB8664:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6015,14 +7143,13 @@ _ZSt18uninitialized_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1E
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8629:
+.LFE8664:
 	.size	_ZSt18uninitialized_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_ET0_T_S7_S6_, .-_ZSt18uninitialized_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES4_ET0_T_S7_S6_
-	.section	.text._ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv,"axG",@progbits,_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv,comdat
-	.align 2
-	.weak	_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv
-	.type	_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv, @function
-_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv:
-.LFB8653:
+	.section	.text._ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4colsEv,"axG",@progbits,_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4colsEv,comdat
+	.weak	_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4colsEv
+	.type	_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4colsEv, @function
+_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4colsEv:
+.LFB8665:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6030,19 +7157,43 @@ _ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	movq	%rdi, -8(%rbp)
-	movq	-8(%rbp), %rax
+	movl	$1, %eax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8653:
-	.size	_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv, .-_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv
-	.section	.text._ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_,"axG",@progbits,_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_,comdat
-	.weak	_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_
-	.type	_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_, @function
-_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_:
-.LFB8655:
+.LFE8665:
+	.size	_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4colsEv, .-_ZN5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4colsEv
+	.section	.text._ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4dataEv,"axG",@progbits,_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4dataEv,comdat
+	.align 2
+	.weak	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4dataEv
+	.type	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4dataEv, @function
+_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4dataEv:
+.LFB8666:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNK5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4dataEv
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8666:
+	.size	_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4dataEv, .-_ZNK5Eigen15PlainObjectBaseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEE4dataEv
+	.section	.text._ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2Ev,"axG",@progbits,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC5Ev,comdat
+	.align 2
+	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2Ev
+	.type	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2Ev, @function
+_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2Ev:
+.LFB8669:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6056,14 +7207,16 @@ _ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8655:
-	.size	_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_, .-_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_
-	.section	.text._ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv,"axG",@progbits,_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv,comdat
+.LFE8669:
+	.size	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2Ev, .-_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2Ev
+	.weak	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC1Ev
+	.set	_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC1Ev,_ZN5Eigen8internal14evaluator_baseINS_6MatrixIdLi2ELi1ELi0ELi2ELi1EEEEC2Ev
+	.section	.text._ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv,"axG",@progbits,_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv,comdat
 	.align 2
-	.weak	_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv
-	.type	_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv, @function
-_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv:
-.LFB8656:
+	.weak	_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv
+	.type	_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv, @function
+_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv:
+.LFB8694:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6077,14 +7230,55 @@ _ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8656:
+.LFE8694:
+	.size	_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv, .-_ZNK5Eigen12DenseStorageIdLi5ELi5ELi1ELi0EE4dataEv
+	.section	.text._ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_,"axG",@progbits,_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_,comdat
+	.weak	_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_
+	.type	_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_, @function
+_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_:
+.LFB8696:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8696:
+	.size	_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_, .-_ZN5Eigen8internal22ignore_unused_variableIlEEvRKT_
+	.section	.text._ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv,"axG",@progbits,_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv,comdat
+	.align 2
+	.weak	_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv
+	.type	_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv, @function
+_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv:
+.LFB8697:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8697:
 	.size	_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv, .-_ZNK5Eigen12DenseStorageIdLi4ELi4ELi1ELi0EE4dataEv
 	.section	.text._ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8max_sizeEv,"axG",@progbits,_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8max_sizeEv,comdat
 	.align 2
 	.weak	_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8max_sizeEv
 	.type	_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8max_sizeEv, @function
 _ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8max_sizeEv:
-.LFB8658:
+.LFB8699:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6101,13 +7295,13 @@ _ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8max_sizeEv
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8658:
+.LFE8699:
 	.size	_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8max_sizeEv, .-_ZNK9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE8max_sizeEv
 	.section	.text._ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_,"axG",@progbits,_ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_,comdat
 	.weak	_ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_
 	.type	_ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_, @function
 _ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_:
-.LFB8659:
+.LFB8700:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6121,16 +7315,16 @@ _ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8659:
+.LFE8700:
 	.size	_ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_, .-_ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_
 	.section	.text._ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_,"axG",@progbits,_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_,comdat
 	.weak	_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_
 	.type	_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_, @function
 _ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_:
-.LFB8660:
+.LFB8701:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8660
+	.cfi_lsda 0x1b,.LLSDA8701
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -6157,11 +7351,11 @@ _ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_:
 	movq	%rax, %r12
 	movq	%r13, %rsi
 	movq	%r12, %rdi
-.LEHB23:
+.LEHB27:
 	call	_ZN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEC1ERKS1_
-.LEHE23:
-	jmp	.L359
-.L358:
+.LEHE27:
+	jmp	.L443
+.L442:
 	endbr64
 	movq	%rax, %r13
 	movq	%rbx, %rsi
@@ -6169,10 +7363,10 @@ _ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_:
 	call	_ZdlPvS_
 	movq	%r13, %rax
 	movq	%rax, %rdi
-.LEHB24:
+.LEHB28:
 	call	_Unwind_Resume@PLT
-.LEHE24:
-.L359:
+.LEHE28:
+.L443:
 	addq	$24, %rsp
 	popq	%rbx
 	popq	%r12
@@ -6181,30 +7375,30 @@ _ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8660:
+.LFE8701:
 	.section	.gcc_except_table
-.LLSDA8660:
+.LLSDA8701:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8660-.LLSDACSB8660
-.LLSDACSB8660:
-	.uleb128 .LEHB23-.LFB8660
-	.uleb128 .LEHE23-.LEHB23
-	.uleb128 .L358-.LFB8660
+	.uleb128 .LLSDACSE8701-.LLSDACSB8701
+.LLSDACSB8701:
+	.uleb128 .LEHB27-.LFB8701
+	.uleb128 .LEHE27-.LEHB27
+	.uleb128 .L442-.LFB8701
 	.uleb128 0
-	.uleb128 .LEHB24-.LFB8660
-	.uleb128 .LEHE24-.LEHB24
+	.uleb128 .LEHB28-.LFB8701
+	.uleb128 .LEHE28-.LEHB28
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8660:
+.LLSDACSE8701:
 	.section	.text._ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_,"axG",@progbits,_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_,comdat
 	.size	_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_, .-_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJRKS2_EEvPT_DpOT0_
 	.section	.text._ZSt12__niter_baseIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEET_S4_,"axG",@progbits,_ZSt12__niter_baseIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEET_S4_,comdat
 	.weak	_ZSt12__niter_baseIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEET_S4_
 	.type	_ZSt12__niter_baseIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEET_S4_, @function
 _ZSt12__niter_baseIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEET_S4_:
-.LFB8661:
+.LFB8702:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6218,13 +7412,13 @@ _ZSt12__niter_baseIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEET_S4_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8661:
+.LFE8702:
 	.size	_ZSt12__niter_baseIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEET_S4_, .-_ZSt12__niter_baseIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEET_S4_
 	.section	.text._ZSt14__relocate_a_1IPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_,"axG",@progbits,_ZSt14__relocate_a_1IPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_,comdat
 	.weak	_ZSt14__relocate_a_1IPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_
 	.type	_ZSt14__relocate_a_1IPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_, @function
 _ZSt14__relocate_a_1IPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_:
-.LFB8662:
+.LFB8703:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6241,8 +7435,8 @@ _ZSt14__relocate_a_1IPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S
 	movq	%rcx, -64(%rbp)
 	movq	-56(%rbp), %rax
 	movq	%rax, -24(%rbp)
-	jmp	.L363
-.L364:
+	jmp	.L447
+.L448:
 	movq	-40(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZSt11__addressofIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEPT_RS3_
@@ -6258,23 +7452,23 @@ _ZSt14__relocate_a_1IPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S
 	call	_ZSt19__relocate_object_aIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_SaIS2_EEvPT_PT0_RT1_
 	addq	$40, -40(%rbp)
 	addq	$40, -24(%rbp)
-.L363:
+.L447:
 	movq	-40(%rbp), %rax
 	cmpq	-48(%rbp), %rax
-	jne	.L364
+	jne	.L448
 	movq	-24(%rbp), %rax
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8662:
+.LFE8703:
 	.size	_ZSt14__relocate_a_1IPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_, .-_ZSt14__relocate_a_1IPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES3_SaIS2_EET0_T_S6_S5_RT1_
 	.section	.text._ZSt4moveIRPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS6_,"axG",@progbits,_ZSt4moveIRPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS6_,comdat
 	.weak	_ZSt4moveIRPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS6_
 	.type	_ZSt4moveIRPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS6_, @function
 _ZSt4moveIRPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS6_:
-.LFB8663:
+.LFB8704:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6288,16 +7482,16 @@ _ZSt4moveIRPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4ty
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8663:
+.LFE8704:
 	.size	_ZSt4moveIRPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS6_, .-_ZSt4moveIRPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEONSt16remove_referenceIT_E4typeEOS6_
 	.section	.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES6_EET0_T_S9_S8_,"axG",@progbits,_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES6_EET0_T_S9_S8_,comdat
 	.weak	_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES6_EET0_T_S9_S8_
 	.type	_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES6_EET0_T_S9_S8_, @function
 _ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES6_EET0_T_S9_S8_:
-.LFB8664:
+.LFB8705:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA8664
+	.cfi_lsda 0x1b,.LLSDA8705
 	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -6312,8 +7506,8 @@ _ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6Matr
 	movq	%rdx, -56(%rbp)
 	movq	-56(%rbp), %rax
 	movq	%rax, -24(%rbp)
-	jmp	.L369
-.L370:
+	jmp	.L453
+.L454:
 	leaq	-40(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEdeEv
@@ -6328,19 +7522,19 @@ _ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6Matr
 	movq	%rax, %rdi
 	call	_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEppEv
 	addq	$40, -24(%rbp)
-.L369:
+.L453:
 	leaq	-48(%rbp), %rdx
 	leaq	-40(%rbp), %rax
 	movq	%rdx, %rsi
 	movq	%rax, %rdi
-.LEHB25:
+.LEHB29:
 	call	_ZStneIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_
-.LEHE25:
+.LEHE29:
 	testb	%al, %al
-	jne	.L370
+	jne	.L454
 	movq	-24(%rbp), %rax
-	jmp	.L376
-.L374:
+	jmp	.L460
+.L458:
 	endbr64
 	movq	%rax, %rdi
 	call	__cxa_begin_catch@PLT
@@ -6349,61 +7543,82 @@ _ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6Matr
 	movq	%rdx, %rsi
 	movq	%rax, %rdi
 	call	_ZSt8_DestroyIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEvT_S4_
-.LEHB26:
+.LEHB30:
 	call	__cxa_rethrow@PLT
-.LEHE26:
-.L375:
+.LEHE30:
+.L459:
 	endbr64
 	movq	%rax, %rbx
 	call	__cxa_end_catch@PLT
 	movq	%rbx, %rax
 	movq	%rax, %rdi
-.LEHB27:
+.LEHB31:
 	call	_Unwind_Resume@PLT
-.LEHE27:
-.L376:
+.LEHE31:
+.L460:
 	movq	-8(%rbp), %rbx
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8664:
+.LFE8705:
 	.section	.gcc_except_table
 	.align 4
-.LLSDA8664:
+.LLSDA8705:
 	.byte	0xff
 	.byte	0x9b
-	.uleb128 .LLSDATT8664-.LLSDATTD8664
-.LLSDATTD8664:
+	.uleb128 .LLSDATT8705-.LLSDATTD8705
+.LLSDATTD8705:
 	.byte	0x1
-	.uleb128 .LLSDACSE8664-.LLSDACSB8664
-.LLSDACSB8664:
-	.uleb128 .LEHB25-.LFB8664
-	.uleb128 .LEHE25-.LEHB25
-	.uleb128 .L374-.LFB8664
+	.uleb128 .LLSDACSE8705-.LLSDACSB8705
+.LLSDACSB8705:
+	.uleb128 .LEHB29-.LFB8705
+	.uleb128 .LEHE29-.LEHB29
+	.uleb128 .L458-.LFB8705
 	.uleb128 0x1
-	.uleb128 .LEHB26-.LFB8664
-	.uleb128 .LEHE26-.LEHB26
-	.uleb128 .L375-.LFB8664
+	.uleb128 .LEHB30-.LFB8705
+	.uleb128 .LEHE30-.LEHB30
+	.uleb128 .L459-.LFB8705
 	.uleb128 0
-	.uleb128 .LEHB27-.LFB8664
-	.uleb128 .LEHE27-.LEHB27
+	.uleb128 .LEHB31-.LFB8705
+	.uleb128 .LEHE31-.LEHB31
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8664:
+.LLSDACSE8705:
 	.byte	0x1
 	.byte	0
 	.align 4
 	.long	0
 
-.LLSDATT8664:
+.LLSDATT8705:
 	.section	.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES6_EET0_T_S9_S8_,"axG",@progbits,_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES6_EET0_T_S9_S8_,comdat
 	.size	_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES6_EET0_T_S9_S8_, .-_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEES6_EET0_T_S9_S8_
+	.section	.text._ZNK5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4dataEv,"axG",@progbits,_ZNK5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4dataEv,comdat
+	.align 2
+	.weak	_ZNK5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4dataEv
+	.type	_ZNK5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4dataEv, @function
+_ZNK5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4dataEv:
+.LFB8706:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8706:
+	.size	_ZNK5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4dataEv, .-_ZNK5Eigen12DenseStorageIdLi2ELi2ELi1ELi0EE4dataEv
 	.section	.text._ZSt19__relocate_object_aIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_SaIS2_EEvPT_PT0_RT1_,"axG",@progbits,_ZSt19__relocate_object_aIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_SaIS2_EEvPT_PT0_RT1_,comdat
 	.weak	_ZSt19__relocate_object_aIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_SaIS2_EEvPT_PT0_RT1_
 	.type	_ZSt19__relocate_object_aIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_SaIS2_EEvPT_PT0_RT1_, @function
 _ZSt19__relocate_object_aIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_SaIS2_EEvPT_PT0_RT1_:
-.LFB8678:
+.LFB8721:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6437,13 +7652,13 @@ _ZSt19__relocate_object_aIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_SaIS2_EEvPT_P
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8678:
+.LFE8721:
 	.size	_ZSt19__relocate_object_aIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_SaIS2_EEvPT_PT0_RT1_, .-_ZSt19__relocate_object_aIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEES2_SaIS2_EEvPT_PT0_RT1_
 	.section	.text._ZStneIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_,"axG",@progbits,_ZStneIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_,comdat
 	.weak	_ZStneIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_
 	.type	_ZStneIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_, @function
 _ZStneIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_:
-.LFB8679:
+.LFB8722:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6464,14 +7679,14 @@ _ZStneIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8679:
+.LFE8722:
 	.size	_ZStneIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_, .-_ZStneIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_
 	.section	.text._ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEppEv,"axG",@progbits,_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEppEv,comdat
 	.align 2
 	.weak	_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEppEv
 	.type	_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEppEv, @function
 _ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEppEv:
-.LFB8680:
+.LFB8723:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6490,14 +7705,14 @@ _ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEppEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8680:
+.LFE8723:
 	.size	_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEppEv, .-_ZNSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEppEv
 	.section	.text._ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEdeEv,"axG",@progbits,_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEdeEv,comdat
 	.align 2
 	.weak	_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEdeEv
 	.type	_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEdeEv, @function
 _ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEdeEv:
-.LFB8681:
+.LFB8724:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6512,13 +7727,13 @@ _ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEdeEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8681:
+.LFE8724:
 	.size	_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEdeEv, .-_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEdeEv
 	.section	.text._ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJS2_EEvPT_DpOT0_,"axG",@progbits,_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJS2_EEvPT_DpOT0_,comdat
 	.weak	_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJS2_EEvPT_DpOT0_
 	.type	_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJS2_EEvPT_DpOT0_, @function
 _ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJS2_EEvPT_DpOT0_:
-.LFB8682:
+.LFB8725:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6548,13 +7763,13 @@ _ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJS2_EEvPT_DpOT0_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8682:
+.LFE8725:
 	.size	_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJS2_EEvPT_DpOT0_, .-_ZSt10_ConstructIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEJS2_EEvPT_DpOT0_
 	.section	.text._ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JS2_EEEvRS3_PT_DpOT0_,"axG",@progbits,_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JS2_EEEvRS3_PT_DpOT0_,comdat
 	.weak	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JS2_EEEvRS3_PT_DpOT0_
 	.type	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JS2_EEEvRS3_PT_DpOT0_, @function
 _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JS2_EEEvRS3_PT_DpOT0_:
-.LFB8685:
+.LFB8729:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6580,13 +7795,13 @@ _ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8685:
+.LFE8729:
 	.size	_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JS2_EEEvRS3_PT_DpOT0_, .-_ZNSt16allocator_traitsISaIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEE9constructIS2_JS2_EEEvRS3_PT_DpOT0_
 	.section	.text._ZSteqIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_,"axG",@progbits,_ZSteqIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_,comdat
 	.weak	_ZSteqIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_
 	.type	_ZSteqIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_, @function
 _ZSteqIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_:
-.LFB8686:
+.LFB8730:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6613,13 +7828,13 @@ _ZSteqIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8686:
+.LFE8730:
 	.size	_ZSteqIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_, .-_ZSteqIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEbRKSt13move_iteratorIT_ES8_
 	.section	.text._ZSt7forwardIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS3_E4typeE,"axG",@progbits,_ZSt7forwardIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS3_E4typeE,comdat
 	.weak	_ZSt7forwardIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS3_E4typeE
 	.type	_ZSt7forwardIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS3_E4typeE, @function
 _ZSt7forwardIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS3_E4typeE:
-.LFB8687:
+.LFB8731:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6633,14 +7848,14 @@ _ZSt7forwardIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS3
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8687:
+.LFE8731:
 	.size	_ZSt7forwardIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS3_E4typeE, .-_ZSt7forwardIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEEOT_RNSt16remove_referenceIS3_E4typeE
 	.section	.text._ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JS3_EEEvPT_DpOT0_,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JS3_EEEvPT_DpOT0_,comdat
 	.align 2
 	.weak	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JS3_EEEvPT_DpOT0_
 	.type	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JS3_EEEvPT_DpOT0_, @function
 _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JS3_EEEvPT_DpOT0_:
-.LFB8688:
+.LFB8732:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6671,14 +7886,14 @@ _ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8688:
+.LFE8732:
 	.size	_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JS3_EEEvPT_DpOT0_, .-_ZN9__gnu_cxx13new_allocatorIN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE9constructIS3_JS3_EEEvPT_DpOT0_
 	.section	.text._ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4baseEv,"axG",@progbits,_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4baseEv,comdat
 	.align 2
 	.weak	_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4baseEv
 	.type	_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4baseEv, @function
 _ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4baseEv:
-.LFB8689:
+.LFB8733:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6693,14 +7908,14 @@ _ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4baseEv:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8689:
+.LFE8733:
 	.size	_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4baseEv, .-_ZNKSt13move_iteratorIPN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEEE4baseEv
 	.local	_ZN5EigenL3fixILi1EEE
 	.comm	_ZN5EigenL3fixILi1EEE,1,1
 	.text
 	.type	_Z41__static_initialization_and_destruction_0ii, @function
 _Z41__static_initialization_and_destruction_0ii:
-.LFB8690:
+.LFB8734:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6712,9 +7927,9 @@ _Z41__static_initialization_and_destruction_0ii:
 	movl	%edi, -4(%rbp)
 	movl	%esi, -8(%rbp)
 	cmpl	$1, -4(%rbp)
-	jne	.L395
+	jne	.L481
 	cmpl	$65535, -8(%rbp)
-	jne	.L395
+	jne	.L481
 	leaq	_ZStL8__ioinit(%rip), %rax
 	movq	%rax, %rdi
 	call	_ZNSt8ios_base4InitC1Ev@PLT
@@ -6740,17 +7955,17 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	_ZN5EigenL3allE(%rip), %rax
 	movq	%rax, %rdi
 	call	_ZN5Eigen8internal5all_tC1Ev
-.L395:
+.L481:
 	nop
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8690:
+.LFE8734:
 	.size	_Z41__static_initialization_and_destruction_0ii, .-_Z41__static_initialization_and_destruction_0ii
 	.type	_GLOBAL__sub_I__Z14calc_dw_windowN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config, @function
 _GLOBAL__sub_I__Z14calc_dw_windowN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config:
-.LFB8691:
+.LFB8735:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -6765,46 +7980,78 @@ _GLOBAL__sub_I__Z14calc_dw_windowN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE8691:
+.LFE8735:
 	.size	_GLOBAL__sub_I__Z14calc_dw_windowN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config, .-_GLOBAL__sub_I__Z14calc_dw_windowN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config
 	.section	.init_array,"aw"
 	.align 8
 	.quad	_GLOBAL__sub_I__Z14calc_dw_windowN5Eigen6MatrixIdLi5ELi1ELi0ELi5ELi1EEER6Config
 	.section	.rodata
-	.align 8
+	.align 16
 .LC0:
+	.long	-1
+	.long	2147483647
+	.long	0
+	.long	0
+	.align 8
+.LC1:
+	.long	-1
+	.long	2146435071
+	.align 8
+.LC2:
 	.long	0
 	.long	1073217536
 	.align 8
-.LC2:
+.LC4:
 	.long	-1717986918
 	.long	1070176665
 	.align 8
-.LC3:
+.LC5:
 	.long	-1717986918
 	.long	-1077306983
 	.align 8
-.LC4:
+.LC6:
 	.long	1256670343
 	.long	1072060184
 	.align 8
-.LC5:
+.LC7:
 	.long	1256670343
 	.long	-1075423464
 	.align 8
-.LC6:
+.LC8:
 	.long	-1717986918
 	.long	1068079513
 	.align 8
-.LC7:
+.LC9:
 	.long	0
 	.long	1074266112
 	.align 8
-.LC8:
+.LC10:
 	.long	0
 	.long	1071644672
 	.align 8
-.LC9:
+.LC11:
+	.long	0
+	.long	1075314688
+	.align 8
+.LC12:
+	.long	-1
+	.long	2145386495
+	.align 16
+.LC13:
+	.long	0
+	.long	-2147483648
+	.long	0
+	.long	0
+	.align 8
+.LC14:
+	.long	0
+	.long	1073741824
+	.align 8
+.LC15:
+	.long	0
+	.long	1072693248
+	.align 8
+.LC16:
 	.long	1413754136
 	.long	1072243195
 	.hidden	DW.ref.__gxx_personality_v0

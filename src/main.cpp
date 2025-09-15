@@ -2,6 +2,7 @@
 #include <iostream>
 #include <Eigen/Core>
 #include <vector>
+#include <limits>
 
 class Config{
     private:
@@ -22,6 +23,8 @@ class Config{
         double yaw_resulution = 0.05;
         double predict_time = 3;
         double dt = 0.5;
+        double lenth = 6;
+        double width = 3;
 
 
         static Config& get_instance(){
@@ -62,11 +65,40 @@ std::vector<robotstate> tra_pre(robotstate state_init, Config& config){
         time+=config.dt;
     }
     return trajectory;
-
-
-
 }
 
+double calc_cost_angle(Eigen::Vector2d goal, std::vector<robotstate> trajectory){
+    double dx = goal[0] - trajectory.back()[0];
+    double dy = goal[1] - trajectory.back()[1];
+    double goal_angle = atan2(dy, dx);
+    double error_angle = trajectory.back()[3] - goal_angle;
+    double angel_cost = abs(atan2(sin(error_angle),cos(error_angle)));
+    return angel_cost;
+
+}
+// 关于不同变量使用的数据类型需要思考
+double calc_cost_obstacle(std::vector<std::vector<double>>& obj, std::vector<robotstate> trajectory, Config& config){
+    double min_r = std::numeric_limits<double>::max() / 2.0;
+    for(size_t i=0;i<obj.size();i++){
+        for(size_t j=0;j<trajectory.size();j++){
+            double yaw_ego = trajectory[j][3];
+            double dx = obj[i][0] - trajectory[j][0];
+            double dy = obj[i][1] - trajectory[j][1];
+            double r = hypot(dx,dy);
+            double obj_local_x = cos(yaw_ego) * dx + sin(yaw_ego) * dy;
+            double obj_local_y = -sin(yaw_ego) * dx + cos(yaw_ego) * dy;
+            bool x_in = (-config.lenth/2 <= obj_local_x && config.lenth/2 >= obj_local_x);
+            bool y_in = (-config.width/2 <= obj_local_y && config.width/2 >= obj_local_y);
+            if (x_in && y_in){
+                // 防止溢出
+                return std::numeric_limits<double>::max() / 2.0;
+            }
+            min_r = std::min(r, min_r);
+
+        }
+    }
+    return 1/min_r;
+}
 
 
 int main(){
@@ -78,5 +110,8 @@ int main(){
     Eigen::Vector4d DW = calc_dw_window(state_now_, c1);
     std::cout << DW[3] << std::endl;
     std::cout << motion(state_now_, c1)[0] << std::endl;
+    std::vector<robotstate> trajectory = tra_pre(state_now_, c1);
+    std::cout << trajectory[0][0] << std::endl;
+    
 
 }
