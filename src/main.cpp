@@ -25,6 +25,9 @@ class Config{
         double dt = 0.5;
         double lenth = 6;
         double width = 3;
+        double cost_factor_angle = 0.5;
+        double cost_factor_goal = 0.5;
+        double cost_factor_speed = 0.5;
 
 
         static Config& get_instance(){
@@ -44,23 +47,23 @@ Eigen::Vector4d calc_dw_window(robotstate state_now, Config& config){
 }
 
 
-robotstate motion(robotstate state_now, Config& config){
+robotstate motion(robotstate state_now, Config& config, double v, double w){
     robotstate state_next;
     state_next[0] = state_now[0] + state_now[2] * cos(state_now[3]) * config.dt;
     state_next[1] = state_now[1] + state_now[2] * sin(state_now[3]) * config.dt;
-    state_next[2] = state_now[2]; 
+    state_next[2] = v; 
     state_next[3] = state_now[3] + state_now[4] * config.dt;
-    state_next[4] = state_now[4];
+    state_next[4] = w;
     return state_next;
 }
 
-std::vector<robotstate> tra_pre(robotstate state_init, Config& config){
+std::vector<robotstate> tra_pre(robotstate state_init, Config& config, double v, double w){
     std::vector<robotstate> trajectory = {state_init};
 
     robotstate state_next = state_init;
     double time = config.dt;
     while(time <= config.predict_time){
-        state_next = motion(state_next, config);
+        state_next = motion(state_next, config, v, w);
         trajectory.push_back(state_next);
         time+=config.dt;
     }
@@ -100,6 +103,20 @@ double calc_cost_obstacle(std::vector<std::vector<double>>& obj, std::vector<rob
     return 1/min_r;
 }
 
+std::vector<robotstate> control_and_best_trajectory(Eigen::Vector4d dw, Config& config, robotstate state_now, Eigen::Vector2d goal){
+
+    for(double v = dw[1]; v <= dw[0]; v += config.v_resulution){
+        for(double w = dw[3]; w <= dw[2]; w += config.yaw_resulution){
+            std::vector<robotstate> trajectory = tra_pre(state_now, config, v, w);
+            double cost_angle = config.cost_factor_angle * calc_cost_angle(goal, trajectory);
+            double cost_speed = trajectory.back()[]
+        
+        
+        }
+
+    }
+
+}
 
 int main(){
     Config& c1 = Config::get_instance();
