@@ -26,7 +26,7 @@ class Config{
         double lenth = 6;
         double width = 3;
         double cost_factor_angle = 0.5;
-        double cost_factor_goal = 0.5;
+        double cost_factor_abj = 0.5;
         double cost_factor_speed = 0.5;
 
 
@@ -103,13 +103,21 @@ double calc_cost_obstacle(std::vector<std::vector<double>>& obj, std::vector<rob
     return 1/min_r;
 }
 
-std::vector<robotstate> control_and_best_trajectory(Eigen::Vector4d dw, Config& config, robotstate state_now, Eigen::Vector2d goal){
+std::vector<robotstate> control_and_best_trajectory(std::vector<std::vector<double>>& obj, Eigen::Vector4d dw, Config& config, robotstate state_now, Eigen::Vector2d goal){
 
+    std::vector<robotstate> best_trajectory = {state_now};
+    double min_cost = std::numeric_limits<double>::max();
     for(double v = dw[1]; v <= dw[0]; v += config.v_resulution){
         for(double w = dw[3]; w <= dw[2]; w += config.yaw_resulution){
             std::vector<robotstate> trajectory = tra_pre(state_now, config, v, w);
             double cost_angle = config.cost_factor_angle * calc_cost_angle(goal, trajectory);
-            double cost_speed = trajectory.back()[]
+            double cost_speed = config.cost_factor_speed * (config.max_v -trajectory.back()[2]);
+            double cost_obj = config.cost_factor_abj * calc_cost_obstacle(obj, trajectory, config);
+            double cost_all = cost_angle + cost_speed + cost_obj;
+            if(cost_all <= min_cost){
+                min_cost = cost_all;
+                best_trajectory = trajectory;
+            }
         
         
         }
