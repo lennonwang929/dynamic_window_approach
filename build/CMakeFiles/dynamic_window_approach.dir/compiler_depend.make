@@ -364,8 +364,362 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc
+  /usr/include/c++/11/bits/vector.tcc \
+  ../include/matplotlibcpp.h \
+  /usr/include/python3.10/Python.h \
+  /usr/include/python3.10/patchlevel.h \
+  /usr/include/python3.10/pyconfig.h \
+  /usr/include/x86_64-linux-gnu/python3.10/pyconfig.h \
+  /usr/include/python3.10/pymacconfig.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/python3.10/pyport.h \
+  /usr/include/inttypes.h \
+  /usr/include/c++/11/math.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+  /usr/include/python3.10/exports.h \
+  /usr/include/python3.10/pymacro.h \
+  /usr/include/python3.10/pymath.h \
+  /usr/include/python3.10/pymem.h \
+  /usr/include/python3.10/cpython/pymem.h \
+  /usr/include/python3.10/object.h \
+  /usr/include/python3.10/cpython/object.h \
+  /usr/include/python3.10/objimpl.h \
+  /usr/include/python3.10/cpython/objimpl.h \
+  /usr/include/python3.10/typeslots.h \
+  /usr/include/python3.10/pyhash.h \
+  /usr/include/python3.10/cpython/pydebug.h \
+  /usr/include/python3.10/bytearrayobject.h \
+  /usr/include/python3.10/cpython/bytearrayobject.h \
+  /usr/include/python3.10/bytesobject.h \
+  /usr/include/python3.10/cpython/bytesobject.h \
+  /usr/include/python3.10/unicodeobject.h \
+  /usr/include/python3.10/cpython/unicodeobject.h \
+  /usr/include/python3.10/longobject.h \
+  /usr/include/python3.10/longintrepr.h \
+  /usr/include/python3.10/boolobject.h \
+  /usr/include/python3.10/floatobject.h \
+  /usr/include/python3.10/complexobject.h \
+  /usr/include/python3.10/rangeobject.h \
+  /usr/include/python3.10/memoryobject.h \
+  /usr/include/python3.10/tupleobject.h \
+  /usr/include/python3.10/cpython/tupleobject.h \
+  /usr/include/python3.10/listobject.h \
+  /usr/include/python3.10/cpython/listobject.h \
+  /usr/include/python3.10/dictobject.h \
+  /usr/include/python3.10/cpython/dictobject.h \
+  /usr/include/python3.10/cpython/odictobject.h \
+  /usr/include/python3.10/enumobject.h \
+  /usr/include/python3.10/setobject.h \
+  /usr/include/python3.10/methodobject.h \
+  /usr/include/python3.10/cpython/methodobject.h \
+  /usr/include/python3.10/moduleobject.h \
+  /usr/include/python3.10/funcobject.h \
+  /usr/include/python3.10/classobject.h \
+  /usr/include/python3.10/fileobject.h \
+  /usr/include/python3.10/cpython/fileobject.h \
+  /usr/include/python3.10/pycapsule.h \
+  /usr/include/python3.10/code.h \
+  /usr/include/python3.10/cpython/code.h \
+  /usr/include/python3.10/pyframe.h \
+  /usr/include/python3.10/traceback.h \
+  /usr/include/python3.10/cpython/traceback.h \
+  /usr/include/python3.10/sliceobject.h \
+  /usr/include/python3.10/cellobject.h \
+  /usr/include/python3.10/iterobject.h \
+  /usr/include/python3.10/cpython/initconfig.h \
+  /usr/include/python3.10/genobject.h \
+  /usr/include/python3.10/pystate.h \
+  /usr/include/python3.10/cpython/pystate.h \
+  /usr/include/python3.10/abstract.h \
+  /usr/include/python3.10/cpython/abstract.h \
+  /usr/include/python3.10/descrobject.h \
+  /usr/include/python3.10/genericaliasobject.h \
+  /usr/include/python3.10/warnings.h \
+  /usr/include/python3.10/weakrefobject.h \
+  /usr/include/python3.10/structseq.h \
+  /usr/include/python3.10/namespaceobject.h \
+  /usr/include/python3.10/cpython/picklebufobject.h \
+  /usr/include/python3.10/cpython/pytime.h \
+  /usr/include/python3.10/codecs.h \
+  /usr/include/python3.10/pyerrors.h \
+  /usr/include/python3.10/cpython/pyerrors.h \
+  /usr/include/python3.10/pythread.h \
+  /usr/include/python3.10/context.h \
+  /usr/include/python3.10/modsupport.h \
+  /usr/include/python3.10/compile.h \
+  /usr/include/python3.10/cpython/compile.h \
+  /usr/include/python3.10/pythonrun.h \
+  /usr/include/python3.10/cpython/pythonrun.h \
+  /usr/include/python3.10/pylifecycle.h \
+  /usr/include/python3.10/cpython/pylifecycle.h \
+  /usr/include/python3.10/ceval.h \
+  /usr/include/python3.10/cpython/ceval.h \
+  /usr/include/python3.10/sysmodule.h \
+  /usr/include/python3.10/cpython/sysmodule.h \
+  /usr/include/python3.10/osmodule.h \
+  /usr/include/python3.10/intrcheck.h \
+  /usr/include/python3.10/import.h \
+  /usr/include/python3.10/cpython/import.h \
+  /usr/include/python3.10/bltinmodule.h \
+  /usr/include/python3.10/eval.h \
+  /usr/include/python3.10/cpython/pyctype.h \
+  /usr/include/python3.10/pystrtod.h \
+  /usr/include/python3.10/pystrcmp.h \
+  /usr/include/python3.10/fileutils.h \
+  /usr/include/python3.10/cpython/fileutils.h \
+  /usr/include/python3.10/cpython/pyfpe.h \
+  /usr/include/python3.10/tracemalloc.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/numeric \
+  /usr/include/c++/11/bits/stl_numeric.h \
+  /usr/include/c++/11/bit \
+  /usr/include/python3.10/numpy/arrayobject.h \
+  /usr/include/python3.10/numpy/ndarrayobject.h \
+  /usr/include/python3.10/numpy/ndarraytypes.h \
+  /usr/include/python3.10/numpy/npy_common.h \
+  /usr/include/python3.10/numpy/numpyconfig.h \
+  /usr/include/python3.10/numpy/_numpyconfig.h \
+  /usr/include/python3.10/numpy/npy_endian.h \
+  /usr/include/python3.10/numpy/npy_cpu.h \
+  /usr/include/python3.10/numpy/utils.h \
+  /usr/include/python3.10/numpy/_neighborhood_iterator_imp.h \
+  /usr/include/python3.10/numpy/__multiarray_api.h \
+  /usr/include/python3.10/numpy/npy_interrupt.h \
+  /usr/include/setjmp.h \
+  /usr/include/signal.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
+  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/x86_64-linux-gnu/bits/signal_ext.h
 
+
+/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
+/usr/include/setjmp.h:
+
+/usr/include/python3.10/numpy/npy_interrupt.h:
+
+/usr/include/python3.10/numpy/_numpyconfig.h:
+
+/usr/include/python3.10/numpy/ndarraytypes.h:
+
+/usr/include/python3.10/numpy/arrayobject.h:
+
+/usr/include/python3.10/numpy/__multiarray_api.h:
+
+/usr/include/c++/11/bit:
+
+/usr/include/c++/11/bits/stl_numeric.h:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/c++/11/map:
+
+/usr/include/python3.10/cpython/pyfpe.h:
+
+/usr/include/python3.10/cpython/fileutils.h:
+
+/usr/include/python3.10/cpython/pyctype.h:
+
+/usr/include/python3.10/intrcheck.h:
+
+/usr/include/python3.10/osmodule.h:
+
+/usr/include/python3.10/cpython/pylifecycle.h:
+
+/usr/include/python3.10/compile.h:
+
+/usr/include/python3.10/modsupport.h:
+
+/usr/include/python3.10/context.h:
+
+/usr/include/python3.10/pyerrors.h:
+
+/usr/include/python3.10/pystrtod.h:
+
+/usr/include/python3.10/codecs.h:
+
+/usr/include/python3.10/cpython/pytime.h:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/python3.10/genericaliasobject.h:
+
+/usr/include/python3.10/descrobject.h:
+
+/usr/include/python3.10/pystate.h:
+
+/usr/include/python3.10/cellobject.h:
+
+/usr/include/python3.10/cpython/traceback.h:
+
+/usr/include/python3.10/code.h:
+
+/usr/include/python3.10/pyframe.h:
+
+/usr/include/python3.10/classobject.h:
+
+/usr/include/python3.10/numpy/npy_common.h:
+
+/usr/include/python3.10/moduleobject.h:
+
+/usr/include/python3.10/pylifecycle.h:
+
+/usr/include/python3.10/cpython/methodobject.h:
+
+/usr/include/python3.10/methodobject.h:
+
+/usr/include/python3.10/cpython/odictobject.h:
+
+/usr/include/python3.10/numpy/ndarrayobject.h:
+
+/usr/include/python3.10/cpython/dictobject.h:
+
+/usr/include/python3.10/dictobject.h:
+
+/usr/include/python3.10/cpython/listobject.h:
+
+/usr/include/python3.10/listobject.h:
+
+/usr/include/python3.10/tupleobject.h:
+
+/usr/include/python3.10/numpy/_neighborhood_iterator_imp.h:
+
+/usr/include/python3.10/memoryobject.h:
+
+/usr/include/python3.10/rangeobject.h:
+
+/usr/include/python3.10/pythonrun.h:
+
+/usr/include/python3.10/floatobject.h:
+
+/usr/include/python3.10/cpython/unicodeobject.h:
+
+/usr/include/python3.10/cpython/bytesobject.h:
+
+/usr/include/python3.10/cpython/fileobject.h:
+
+/usr/include/python3.10/cpython/pydebug.h:
+
+/usr/include/python3.10/cpython/abstract.h:
+
+/usr/include/python3.10/typeslots.h:
+
+/usr/include/python3.10/cpython/pythonrun.h:
+
+/usr/include/python3.10/cpython/objimpl.h:
+
+/usr/include/python3.10/pymem.h:
+
+/usr/include/python3.10/exports.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/linux/stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/python3.10/pyport.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/python3.10/pyconfig.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+/usr/include/python3.10/funcobject.h:
+
+/usr/include/python3.10/objimpl.h:
+
+/usr/include/python3.10/patchlevel.h:
+
+/usr/include/python3.10/Python.h:
 
 /usr/include/c++/11/bits/vector.tcc:
 
@@ -373,11 +727,15 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/vector:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
 /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
 /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
 
 /usr/include/eigen3/Eigen/src/Core/Reverse.h:
+
+/usr/include/x86_64-linux-gnu/asm/types.h:
 
 /usr/include/eigen3/Eigen/src/Core/Replicate.h:
 
@@ -389,6 +747,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/Select.h:
 
+/usr/include/c++/11/numeric:
+
 /usr/include/eigen3/Eigen/src/Core/CoreIterators.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
@@ -396,6 +756,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
+
+/usr/include/python3.10/sysmodule.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
 
@@ -407,6 +769,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
 
+/usr/include/python3.10/bltinmodule.h:
+
 /usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/11/bits/atomic_base.h:
@@ -416,6 +780,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
 
 /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
 /usr/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
 
@@ -427,6 +793,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/Fuzzy.h:
 
+/usr/include/x86_64-linux-gnu/python3.10/pyconfig.h:
+
 /usr/include/eigen3/Eigen/src/Core/Transpose.h:
 
 /usr/include/eigen3/Eigen/src/Core/Reshaped.h:
@@ -435,11 +803,15 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/Ref.h:
 
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
 /usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
 
 /usr/include/eigen3/Eigen/src/Core/Map.h:
 
 /usr/include/eigen3/Eigen/src/Core/Stride.h:
+
+/usr/include/c++/11/math.h:
 
 /usr/include/eigen3/Eigen/src/Core/Dot.h:
 
@@ -457,6 +829,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
 
+/usr/include/python3.10/pymacconfig.h:
+
 /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
 
 /usr/include/eigen3/Eigen/src/Core/ArrayBase.h:
@@ -465,9 +839,15 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/EigenBase.h:
 
+/usr/include/python3.10/fileobject.h:
+
 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
 
+/usr/include/python3.10/cpython/pyerrors.h:
+
 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
+
+/usr/include/python3.10/tracemalloc.h:
 
 /usr/include/eigen3/Eigen/src/Core/MatrixBase.h:
 
@@ -481,7 +861,11 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
 
+/usr/include/python3.10/cpython/import.h:
+
 /usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:
 
@@ -497,6 +881,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_pair.h:
 
+/usr/include/c++/11/bits/stl_multimap.h:
+
 /usr/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
 
 /usr/include/eigen3/Eigen/src/Core/StlIterators.h:
@@ -504,6 +890,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/pthread.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
 
 /usr/include/c++/11/bits/ios_base.h:
 
@@ -519,13 +907,19 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
 /usr/include/eigen3/Eigen/src/Core/Assign.h:
 
 /usr/include/c++/11/clocale:
 
+/usr/include/python3.10/numpy/npy_cpu.h:
+
 /usr/include/eigen3/Eigen/src/Core/Array.h:
 
 /usr/include/c++/11/bits/ostream.tcc:
+
+/usr/include/python3.10/import.h:
 
 /usr/include/c++/11/bits/char_traits.h:
 
@@ -535,15 +929,23 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/tuple:
 
+/usr/include/python3.10/pycapsule.h:
+
 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/include/python3.10/longintrepr.h:
 
 /usr/include/c++/11/bits/move.h:
 
 /usr/include/c++/11/bits/hash_bytes.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/Constants.h:
+
+/usr/include/python3.10/cpython/tupleobject.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
@@ -557,9 +959,13 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
+/usr/include/python3.10/numpy/numpyconfig.h:
+
 /usr/include/c++/11/typeinfo:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/python3.10/traceback.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -581,6 +987,10 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/cwchar:
 
+/usr/include/x86_64-linux-gnu/bits/statx.h:
+
+/usr/include/unistd.h:
+
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
@@ -588,6 +998,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/python3.10/pymath.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
@@ -597,13 +1009,19 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stringfwd.h:
 
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
 /usr/include/c++/11/backward/binders.h:
 
 /usr/include/c++/11/algorithm:
 
 /usr/include/alloca.h:
 
+/usr/include/python3.10/boolobject.h:
+
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/signal.h:
 
 /usr/include/strings.h:
 
@@ -619,6 +1037,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
+/usr/include/python3.10/namespaceobject.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
@@ -626,6 +1046,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/c++/11/cassert:
+
+/usr/include/asm-generic/int-ll64.h:
 
 /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h:
 
@@ -645,7 +1067,11 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/ext/type_traits.h:
 
+/usr/include/asm-generic/posix_types.h:
+
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
 
 /usr/include/c++/11/bits/exception_defines.h:
 
@@ -668,6 +1094,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/eigen3/Eigen/src/Core/VectorBlock.h:
 
 /usr/include/c++/11/ostream:
+
+/usr/include/python3.10/longobject.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
 
@@ -699,9 +1127,13 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/features.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/python3.10/pystrcmp.h:
 
 /usr/include/eigen3/Eigen/src/Core/Redux.h:
 
@@ -727,11 +1159,17 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
+
 /usr/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
 
 /usr/include/c++/11/bits/functexcept.h:
 
+/usr/include/python3.10/cpython/pystate.h:
+
 /usr/include/c++/11/streambuf:
+
+/usr/include/python3.10/iterobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -743,11 +1181,19 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/asm-generic/types.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/c++/11/bits/exception_ptr.h:
+
+/usr/include/python3.10/cpython/bytearrayobject.h:
+
+/usr/include/python3.10/object.h:
 
 /usr/include/c++/11/ext/string_conversions.h:
 
@@ -759,15 +1205,25 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/localefwd.h:
 
+/usr/include/python3.10/bytesobject.h:
+
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/python3.10/warnings.h:
 
 /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
+/usr/include/c++/11/ext/aligned_buffer.h:
+
 /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/c++/11/bits/erase_if.h:
+
+/usr/include/python3.10/cpython/ceval.h:
 
 /usr/include/c++/11/bits/ptr_traits.h:
 
@@ -775,9 +1231,13 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/endian.h:
 
+../include/matplotlibcpp.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/python3.10/pymacro.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -787,11 +1247,15 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
+/usr/include/python3.10/pyhash.h:
+
 /usr/include/eigen3/Eigen/src/Core/DiagonalProduct.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/python3.10/unicodeobject.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
@@ -821,9 +1285,13 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
 /usr/include/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/python3.10/cpython/picklebufobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -846,6 +1314,10 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/functional:
 
 /usr/include/linux/errno.h:
+
+/usr/include/python3.10/eval.h:
+
+/usr/include/python3.10/bytearrayobject.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
@@ -875,6 +1347,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
+/usr/include/python3.10/pythread.h:
+
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/c++/11/ext/alloc_traits.h:
@@ -887,6 +1361,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/range_access.h:
 
+/usr/include/python3.10/ceval.h:
+
 /usr/include/c++/11/bits/stl_vector.h:
 
 /usr/include/c++/11/cstddef:
@@ -898,6 +1374,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/stdc-predef.h:
 
 /usr/include/c++/11/bits/alloc_traits.h:
+
+/usr/include/python3.10/cpython/sysmodule.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h:
 
@@ -926,6 +1404,10 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/cerrno:
 
 /usr/include/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
+
+/usr/include/python3.10/sliceobject.h:
 
 /usr/include/eigen3/Eigen/src/Core/Transpositions.h:
 
@@ -957,9 +1439,13 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/system_error:
 
+/usr/include/python3.10/cpython/compile.h:
+
 /usr/include/eigen3/Eigen/src/Core/MapBase.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:
+
+/usr/include/python3.10/enumobject.h:
 
 /usr/include/c++/11/ios:
 
@@ -969,6 +1455,10 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/stdexcept:
 
+/usr/include/python3.10/setobject.h:
+
+/usr/include/python3.10/cpython/pymem.h:
+
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
@@ -977,11 +1467,15 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/locale_facets.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
 /usr/include/c++/11/cwctype:
 
 /usr/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
+
+/usr/include/linux/types.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
@@ -989,9 +1483,15 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 
+/usr/include/python3.10/structseq.h:
+
 /usr/include/c++/11/bits/basic_ios.tcc:
 
+/usr/include/python3.10/numpy/npy_endian.h:
+
 /usr/include/c++/11/istream:
+
+/usr/include/python3.10/cpython/object.h:
 
 /usr/include/eigen3/Eigen/src/Core/Diagonal.h:
 
@@ -1002,6 +1502,10 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/usr/include/python3.10/genobject.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h:
 
@@ -1019,6 +1523,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_relops.h:
 
+/usr/include/python3.10/numpy/utils.h:
+
 /usr/include/c++/11/array:
 
 /usr/include/c++/11/new:
@@ -1031,6 +1537,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
+/usr/include/linux/stddef.h:
+
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/math.h:
@@ -1041,15 +1549,23 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
 
+/usr/include/python3.10/cpython/initconfig.h:
+
 /usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/string.h:
 
 /usr/include/c++/11/limits:
 
+/usr/include/python3.10/fileutils.h:
+
+/usr/include/python3.10/abstract.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h:
+
+/usr/include/python3.10/complexobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
@@ -1069,9 +1585,13 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/util/IntegralConstant.h:
 
+/usr/include/python3.10/cpython/code.h:
+
 /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
 
 /usr/include/eigen3/Eigen/src/Core/NumTraits.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/eigen3/Eigen/src/Core/MathFunctions.h:
 
@@ -1084,6 +1604,8 @@ CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
+
+/usr/include/python3.10/weakrefobject.h:
 
 /usr/include/eigen3/Eigen/src/Core/IndexedView.h:
 

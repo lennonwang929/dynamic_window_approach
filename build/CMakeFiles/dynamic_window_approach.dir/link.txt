@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -Werror -std=c++14 -save-temps=obj CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o -o dynamic_window_approach 
+/usr/bin/c++  -Wall -Werror -std=c++14 -save-temps=obj CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o -o dynamic_window_approach  /usr/lib/x86_64-linux-gnu/libpython3.10.so 

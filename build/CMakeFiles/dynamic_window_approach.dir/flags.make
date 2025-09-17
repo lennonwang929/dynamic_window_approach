@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/eigen3
+CXX_INCLUDES = -I/usr/include/eigen3 -I/home/jing/dev/dynamic_0902/dynamic_window_approach/include -I/home/jing/dev/dynamic_0902/dynamic_window_approach/src -I/usr/include/python3.10
 
 CXX_FLAGS =  -Wall -Werror -std=c++14 -save-temps=obj
 
