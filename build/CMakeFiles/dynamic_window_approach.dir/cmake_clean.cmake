@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/dynamic_window_approach.dir/src/draw_vehicle.cpp.o"
+  "CMakeFiles/dynamic_window_approach.dir/src/draw_vehicle.cpp.o.d"
   "CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o"
   "CMakeFiles/dynamic_window_approach.dir/src/main.cpp.o.d"
   "dynamic_window_approach"

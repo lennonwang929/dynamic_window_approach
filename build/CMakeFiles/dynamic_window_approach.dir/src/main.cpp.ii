@@ -119119,7 +119119,7 @@ PyObject* get_listlist(const std::vector<std::vector<Numeric>>& ll)
 
 }
 
-PyObject* init_3d_axis(PyObject *fig)
+inline PyObject* init_3d_axis(PyObject *fig)
 {
     PyObject *asp_kwargs = PyDict_New();
     PyDict_SetItemString(asp_kwargs, "projection", PyUnicode_FromString("3d"));
@@ -121996,6 +121996,15 @@ private:
 
 }
 # 7 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 2
+# 1 "/home/jing/dev/dynamic_0902/dynamic_window_approach/include/draw_vehicle.h" 1
+
+
+
+
+
+
+void draw_vehicle(std::vector<double> vehicle_center, double lenth, double width);
+# 8 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 2
 
 namespace plt = matplotlibcpp;
 
@@ -122011,39 +122020,39 @@ class Config{
         double max_accel = 0.3;
         double min_accel = -0.3;
         double max_yaw_rate = 40 * 
-# 21 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
+# 22 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
                                   3.14159265358979323846 
-# 21 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
+# 22 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
                                        / 180;
         double min_yaw_rate = -40 * 
-# 22 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
+# 23 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
                                    3.14159265358979323846 
-# 22 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
+# 23 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
                                         / 180;
         double max_yaw_rate_delta = 40 * 
-# 23 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
+# 24 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
                                         3.14159265358979323846 
-# 23 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
+# 24 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
                                              / 180;
         double min_yaw_rate_delta = -40 * 
-# 24 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
+# 25 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
                                          3.14159265358979323846 
-# 24 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
+# 25 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
                                               / 180;
         double v_resulution = 0.05;
         double yaw_resulution = 0.5 * 
-# 26 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
+# 27 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
                                      3.14159265358979323846 
-# 26 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
+# 27 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
                                           / 180.0;
         double predict_time = 3;
         double dt = 0.1;
         double lenth = 2;
         double width = 1.2;
 
-        double cost_factor_goal = 0.6;
-        double cost_factor_abj = 1;
-        double cost_factor_speed = 1;
+        double cost_factor_goal = 0.4;
+        double cost_factor_abj = 8;
+        double cost_factor_speed = 0.6;
         double stuck_flag_v = 0.01;
 
 
@@ -122164,9 +122173,9 @@ int main(){
     std::cout << c1.max_v << std::endl;
     robotstate state_now_;
     state_now_ << 0, 0, 0, 45 * 
-# 154 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
+# 155 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp" 3 4
                                3.14159265358979323846 
-# 154 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
+# 155 "/home/jing/dev/dynamic_0902/dynamic_window_approach/src/main.cpp"
                                     / 180, 0;
     std::cout << state_now_[0] << std::endl;
 
@@ -122189,7 +122198,10 @@ int main(){
         plt::plot({ob[0]}, {ob[1]}, "ok");
     }
     Eigen::Vector2d control;
+
+
     while(true){
+
         std::cout << "x: "<< state_now_[0] << std::endl;
         std::cout << "y: " << state_now_[1] << std::endl;
         std::cout << "v: " << state_now_[2] << std::endl;
@@ -122202,7 +122214,10 @@ int main(){
         double dx = x[0] - goal[0];
         double dy = x[1] - goal[1];
         double dis2goal = hypot(dy,dx);
+        std::vector<double> center_point = {x[0], x[1], x[3]};
+
         std::cout << "dis2goal: " << dis2goal << std::endl;
+        draw_vehicle(center_point, c1.lenth, c1.width);
         plt::scatter(std::vector<double>{x[0]}, std::vector<double>{x[1]}, 50, std::map<std::string, std::string>{{"color", "blue"}});
         plt::pause(0.1);
         if(dis2goal <= 0.5){

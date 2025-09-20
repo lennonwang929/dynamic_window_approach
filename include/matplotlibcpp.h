@@ -439,7 +439,7 @@ PyObject* get_listlist(const std::vector<std::vector<Numeric>>& ll)
 
 } // namespace detail
 
-PyObject* init_3d_axis(PyObject *fig)
+inline PyObject* init_3d_axis(PyObject *fig)
 {
     PyObject *asp_kwargs = PyDict_New();
     PyDict_SetItemString(asp_kwargs, "projection", PyString_FromString("3d"));

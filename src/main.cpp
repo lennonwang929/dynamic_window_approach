@@ -4,6 +4,7 @@
 #include <vector>
 #include <limits>
 #include "matplotlibcpp.h"
+#include "draw_vehicle.h"
 
 namespace plt = matplotlibcpp;
 
@@ -15,9 +16,9 @@ class Config{
         Config& operater(const Config&) = delete;
     public:
         double max_v = 1.5;
-        double min_v = 0;
-        double max_accel = 0.2;
-        double min_accel = -0.2;
+        double min_v = -1;
+        double max_accel = 0.3;
+        double min_accel = -0.3;
         double max_yaw_rate = 40 * M_PI / 180;
         double min_yaw_rate = -40 * M_PI / 180;
         double max_yaw_rate_delta = 40 * M_PI / 180;
@@ -25,12 +26,14 @@ class Config{
         double v_resulution = 0.05;
         double yaw_resulution = 0.5 * M_PI / 180.0;
         double predict_time = 3;
-        double dt = 0.5;
-        double lenth = 1;
-        double width = 0.6;
-        double cost_factor_angle = 0.5;
-        double cost_factor_abj = 0.5;
-        double cost_factor_speed = 0.5;
+        double dt = 0.1;
+        double lenth = 2;
+        double width = 1.2;
+        // 1,0.5,0.5
+        double cost_factor_goal = 0.4;
+        double cost_factor_abj = 8;
+        double cost_factor_speed = 0.6;
+        double stuck_flag_v = 0.01;
 
 
         static Config& get_instance(){
@@ -73,13 +76,15 @@ std::vector<robotstate> tra_pre(robotstate state_init, Config& config, double v,
     return trajectory;
 }
 
-double calc_cost_angle(Eigen::Vector2d goal, std::vector<robotstate> trajectory){
+double calc_cost_goal(Eigen::Vector2d goal, std::vector<robotstate> trajectory){
     double dx = goal[0] - trajectory.back()[0];
     double dy = goal[1] - trajectory.back()[1];
     double goal_angle = atan2(dy, dx);
+    double goal_dis = hypot(dy, dx);
     double error_angle = trajectory.back()[3] - goal_angle;
     double angel_cost = abs(atan2(sin(error_angle),cos(error_angle)));
-    return angel_cost;
+    double goal_cost = angel_cost + goal_dis;
+    return goal_cost;
 
 }
 // 关于不同变量使用的数据类型需要思考
@@ -112,22 +117,32 @@ std::vector<robotstate> control_and_best_trajectory(std::vector<std::vector<doub
     double min_cost = std::numeric_limits<double>::max();
     for(double v = dw[1]; v <= dw[0]; v += config.v_resulution){
         for(double w = dw[3]; w <= dw[2]; w += config.yaw_resulution){
-            std::cout << "v_0: " << v << std::endl;
+            // std::cout << "v_0: " << v << std::endl;
             std::vector<robotstate> trajectory = tra_pre(state_now, config, v, w);
-            double cost_angle = config.cost_factor_angle * calc_cost_angle(goal, trajectory);
+            double cost_goal = config.cost_factor_goal * calc_cost_goal(goal, trajectory);
             double cost_speed = config.cost_factor_speed * (config.max_v -trajectory.back()[2]);
             double cost_obj = config.cost_factor_abj * calc_cost_obstacle(obj, trajectory, config);
-            double cost_all = cost_angle + cost_speed + cost_obj;
-            std::cout << "cost_all: "<< cost_all << std::endl;
+            double cost_all = cost_goal + cost_speed + cost_obj;
+            
             if(cost_all <= min_cost){
                 min_cost = cost_all;
                 best_trajectory = trajectory;
                 best_u << v, w;
+                if(best_u[0] < config.stuck_flag_v){
+                    best_u[1] = config.min_yaw_rate;
+                }
             }
-               
+            std::cout << "cost_all: "<< cost_all << std::endl;
+            std::cout << "cost_goal: "<< cost_goal << std::endl;
+            std::cout << "cost_speed: "<< cost_speed << std::endl;
+            std::cout << "cost_obj: "<< cost_obj << std::endl;            
+                    
         }
 
     }
+
+    std::cout << "min_cost: " << min_cost << std::endl;
+    std::cout << "best_v: " << best_u[0] << std::endl;
     control = best_u;
     return best_trajectory;
 
@@ -159,7 +174,10 @@ int main(){
         plt::plot({ob[0]}, {ob[1]}, "ok");
     }
     Eigen::Vector2d control;
+    // std::vector<double> center_point = {state_now_[0], state_now_[1], state_now_[4]};
+    // draw_vehicle(center_point, c1.lenth, c1.width);
     while(true){
+        // plt::cla();
         std::cout << "x: "<< state_now_[0] << std::endl;
         std::cout << "y: " << state_now_[1] << std::endl;
         std::cout << "v: " << state_now_[2] << std::endl;
@@ -172,9 +190,13 @@ int main(){
         double dx = x[0] - goal[0];
         double dy = x[1] - goal[1];
         double dis2goal = hypot(dy,dx);
+        std::vector<double> center_point = {x[0], x[1], x[3]};
+        
+        std::cout << "dis2goal: " << dis2goal << std::endl;
+        draw_vehicle(center_point, c1.lenth, c1.width);
         plt::scatter(std::vector<double>{x[0]}, std::vector<double>{x[1]}, 50, std::map<std::string, std::string>{{"color", "blue"}});
         plt::pause(0.1);
-        if(dis2goal == 0.5){
+        if(dis2goal <= 0.5){
             break;
         }
     }

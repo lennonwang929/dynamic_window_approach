@@ -129,6 +129,30 @@ dynamic_window_approach/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamic_window_approach.dir/build.make CMakeFiles/dynamic_window_approach.dir/build
 .PHONY : dynamic_window_approach/fast
 
+src/draw_vehicle.o: src/draw_vehicle.cpp.o
+.PHONY : src/draw_vehicle.o
+
+# target to build an object file
+src/draw_vehicle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamic_window_approach.dir/build.make CMakeFiles/dynamic_window_approach.dir/src/draw_vehicle.cpp.o
+.PHONY : src/draw_vehicle.cpp.o
+
+src/draw_vehicle.i: src/draw_vehicle.cpp.i
+.PHONY : src/draw_vehicle.i
+
+# target to preprocess a source file
+src/draw_vehicle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamic_window_approach.dir/build.make CMakeFiles/dynamic_window_approach.dir/src/draw_vehicle.cpp.i
+.PHONY : src/draw_vehicle.cpp.i
+
+src/draw_vehicle.s: src/draw_vehicle.cpp.s
+.PHONY : src/draw_vehicle.s
+
+# target to generate assembly for a file
+src/draw_vehicle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamic_window_approach.dir/build.make CMakeFiles/dynamic_window_approach.dir/src/draw_vehicle.cpp.s
+.PHONY : src/draw_vehicle.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... dynamic_window_approach"
+	@echo "... src/draw_vehicle.o"
+	@echo "... src/draw_vehicle.i"
+	@echo "... src/draw_vehicle.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
